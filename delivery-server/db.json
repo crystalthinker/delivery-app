@@ -6,7 +6,9 @@
       "last_name": "Eschweiler",
       "email": "sebastian@abcdelivery.com",
       "phone": "9557735467",
-      "status": "available"
+      "status": "available",
+      "address":"test address",
+      "pincode":"695022"
     },
     {
       "id": 2,
@@ -14,7 +16,9 @@
       "last_name": "Palmer",
       "email": "steve@abcdelivery.com",
       "phone": "9557735468",
-      "status": "available"
+      "status": "available",
+      "address":"test address",
+      "pincode":"695301"
     },
     {
       "id": 3,
@@ -22,7 +26,9 @@
       "last_name": "Smith",
       "email": "ann@abcdelivery.com",
       "phone": "9557735469",
-      "status": "available"
+      "status": "available",
+      "address":"test address",
+      "pincode":"695022"
     },
     {
       "id": 4,
@@ -30,7 +36,9 @@
       "last_name": "Eschweiler",
       "email": "john@abcdelivery.com",
       "phone": "9557735467",
-      "status": "available"
+      "status": "available",
+      "address":"test address",
+      "pincode":"695022"
     },
     {
       "id": 5,
@@ -38,7 +46,9 @@
       "last_name": "Palmer",
       "email": "ram@abcdelivery.com",
       "phone": "9587735468",
-      "status": "available"
+      "status": "available",
+      "address":"test address",
+      "pincode":"695022"
     },
     {
       "id": 6,
@@ -46,21 +56,66 @@
       "last_name": "Smith",
       "email": "sam@abcdelivery.com",
       "phone": "9587735469",
-      "status": "available"
+      "status": "available",
+      "address":"test address",
+      "pincode":"695301"
     }
   ] ,
+  "shops":[{
+    "id":1,
+    "name":"vridhi",
+    "type":"hotel",
+    "address":"test address",
+    "pincode":"695022",
+    "phone":"9885531678"
+  }, {
+      "id":2,
+      "name":"pepperfry",
+      "type":"furniture",
+      "address":"test address123",
+      "pincode":"695301",
+      "phone":"9887531678"
+    }, {
+    "id":3,
+    "name":"test_shop",
+    "type":"stationary",
+    "address":"test address2222",
+    "pincode":"695022",
+    "phone":"9885551678"
+  },{
+    "id":4,
+    "name":"vridhi121",
+    "type":"hotel",
+    "address":"test address",
+    "pincode":"695022",
+    "phone":"9885931678"
+  }, {
+    "id":5,
+    "name":"pepperfryw2w22",
+    "type":"furniture",
+    "address":"test address123",
+    "pincode":"695301",
+    "phone":"9885539678"
+  }, {
+    "id":6,
+    "name":"test_shop12112",
+    "type":"stationary",
+    "address":"test address2222",
+    "pincode":"695301",
+    "phone":"9885531698"
+  }],
   "users":[{
-      "id":100,
+      "id":1,
       "username":"abc_admin",
       "password":"abc_admin",
       "role": "admin"
     }, {
-      "id":200,
+      "id":2,
       "username":"test",
       "password":"test",
       "role": "delivery_boy"
     }, {
-      "id":300,
+      "id":3,
       "username":"abhi",
       "password":"abhi",
       "role": "delivery_boy"
