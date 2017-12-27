@@ -18,5 +18,23 @@
       "last_name": "Smith",
       "email": "ann@abcdelivery.com"
     }
+  ] ,
+  "users":[{
+      "id":100,
+      "username":"abc_admin",
+      "password":"abc_admin",
+      "role": "admin"
+    }, {
+      "id":200,
+      "username":"test",
+      "password":"test",
+      "role": "delivery_boy"
+    }, {
+      "id":300,
+      "username":"abhi",
+      "password":"abhi",
+      "role": "delivery_boy"
+    }
   ]
+
 }
