@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {ShopManagementComponent} from './shop-management.component';
 
-const routes: Routes = [];
+
+const routes: Routes = [
+  {path: 'shops', component: ShopManagementComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
