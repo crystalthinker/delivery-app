@@ -6,6 +6,7 @@ import {RouterModule} from '@angular/router';
 import {APP_ROUTES} from './app-routing.module';
 import {HomeModule} from './modules/home/home.module';
 import {CoreModule} from './core/core.module';
+import {LoginModule} from './modules/login/login.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import {CoreModule} from './core/core.module';
   imports: [
     BrowserModule,
     CoreModule,
+    LoginModule,
     HomeModule,
     RouterModule.forRoot(APP_ROUTES),
   ],

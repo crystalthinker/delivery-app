@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.service.getAllDeliveryBoys().subscribe(deliveryBoys => {
-      console.log('check service', deliveryBoys);
+      console.log('data:-', deliveryBoys);
     });
   }
 }
