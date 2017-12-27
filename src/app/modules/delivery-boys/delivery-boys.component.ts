@@ -7,12 +7,12 @@ import {DeliveryBoysService} from '../../core/services/delivery-boys/delivery-bo
   styleUrls: ['./delivery-boys.component.scss']
 })
 export class DeliveryBoysComponent implements OnInit {
-
+  deliveryBoys: any = [];
   constructor(private service: DeliveryBoysService) { }
 
   ngOnInit() {
     this.service.getAllDeliveryBoys().subscribe(deliveryBoys => {
-      console.log('data:-', deliveryBoys);
+      this.deliveryBoys = deliveryBoys;
     });
   }
 

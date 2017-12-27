@@ -4,19 +4,49 @@
       "id": 1,
       "first_name": "Sebastian",
       "last_name": "Eschweiler",
-      "email": "sebastian@abcdelivery.com"
+      "email": "sebastian@abcdelivery.com",
+      "phone": "9557735467",
+      "status": "available"
     },
     {
       "id": 2,
       "first_name": "Steve",
       "last_name": "Palmer",
-      "email": "steve@abcdelivery.com"
+      "email": "steve@abcdelivery.com",
+      "phone": "9557735468",
+      "status": "available"
     },
     {
       "id": 3,
       "first_name": "Ann",
       "last_name": "Smith",
-      "email": "ann@abcdelivery.com"
+      "email": "ann@abcdelivery.com",
+      "phone": "9557735469",
+      "status": "available"
+    },
+    {
+      "id": 4,
+      "first_name": "John",
+      "last_name": "Eschweiler",
+      "email": "john@abcdelivery.com",
+      "phone": "9557735467",
+      "status": "available"
+    },
+    {
+      "id": 5,
+      "first_name": "Ram",
+      "last_name": "Palmer",
+      "email": "ram@abcdelivery.com",
+      "phone": "9587735468",
+      "status": "available"
+    },
+    {
+      "id": 6,
+      "first_name": "Sam",
+      "last_name": "Smith",
+      "email": "sam@abcdelivery.com",
+      "phone": "9587735469",
+      "status": "available"
     }
   ] ,
   "users":[{

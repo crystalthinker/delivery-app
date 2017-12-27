@@ -1,6 +1,33 @@
+
 <div class="row">
-  <div class="col">
-    delivery-boys works!
+    <div class="col-10">
+      <h4>Delivery Boys</h4>
+    </div>
+    <div class="col-2">
+      <button type="button" class="btn btn-primary">Add a Delivery Boy</button>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <table class="table table-secondary table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let deliveryBoy of deliveryBoys;">
+        <td>{{deliveryBoy.first_name}} {{deliveryBoy.last_name}}</td>
+        <td>{{deliveryBoy.email}}</td>
+        <td>{{deliveryBoy.phone}}</td>
+        <td>{{deliveryBoy.status}}</td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 
