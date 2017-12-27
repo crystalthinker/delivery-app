@@ -8,11 +8,8 @@ import {DeliveryBoysService} from '../../core/services/delivery-boys/delivery-bo
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private service: DeliveryBoysService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.service.getAllDeliveryBoys().subscribe(deliveryBoys => {
-      console.log('data:-', deliveryBoys);
-    });
   }
 }
