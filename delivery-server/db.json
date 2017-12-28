@@ -135,7 +135,7 @@
         "phone":""
       },
       "delivery_boy_assigned": "Sebastin Eschweiler",
-      "status": "completed"
+      "status": "Awaiting pickup"
     },
     {
       "id": "2",
@@ -148,7 +148,20 @@
         "phone":""
       },
       "delivery_boy_assigned": "Ann Smith",
-      "status": "delivery in progress"
+      "status": "Out for delivery"
+    },
+    {
+      "id": "3",
+      "delivery_from": "test_shop",
+      "shop_id":"3",
+      "delivery_boy_id":"5",
+      "delivery_to": {
+        "customer_name":"",
+        "address":"",
+        "phone":""
+      },
+      "delivery_boy_assigned": "Ram Palmer",
+      "status": "Delivered"
     }
   ]
 }
