@@ -1,0 +1,31 @@
+<div class="row delivery-header">
+  <div class="col">
+    <button type="button" class="btn btn-primary float-right" [routerLink]="['/delivery-boys/add']">Add a Delivery Boy</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <table class="table table-secondary table-bordered table-hover">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+        <th scope="col">Pincode</th>
+        <th scope="col">Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let deliveryBoy of deliveryBoys;">
+        <td>{{deliveryBoy.first_name}} {{deliveryBoy.last_name}}</td>
+        <td>{{deliveryBoy.email}}</td>
+        <td>{{deliveryBoy.phone}}</td>
+        <td>{{deliveryBoy.address}}</td>
+        <td>{{deliveryBoy.pincode}}</td>
+        <td>{{deliveryBoy.status}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

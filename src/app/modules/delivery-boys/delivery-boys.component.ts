@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {DeliveryBoysService} from '../../core/services/delivery-boys/delivery-boys.service';
 
 @Component({
   selector: 'app-delivery-boys',
@@ -7,13 +6,8 @@ import {DeliveryBoysService} from '../../core/services/delivery-boys/delivery-bo
   styleUrls: ['./delivery-boys.component.scss']
 })
 export class DeliveryBoysComponent implements OnInit {
-  deliveryBoys: any = [];
-  constructor(private service: DeliveryBoysService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.service.getAllDeliveryBoys().subscribe(deliveryBoys => {
-      this.deliveryBoys = deliveryBoys;
-    });
   }
-
 }
