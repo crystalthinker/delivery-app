@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {DeliveryService} from '../../core/services/delivery/delivery.service';
-
 
 @Component({
   selector: 'app-delivery-management',
@@ -8,14 +6,9 @@ import {DeliveryService} from '../../core/services/delivery/delivery.service';
   styleUrls: ['./delivery-management.component.scss']
 })
 export class DeliveryManagementComponent implements OnInit {
-
-  deliveries: any = [];
-  constructor(private service: DeliveryService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.service.getAllDelivery().subscribe(deliveries => {
-      this.deliveries = deliveries;
-    });
   }
 
 }

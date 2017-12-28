@@ -1,7 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {DeliveryManagementComponent} from './delivery-management.component';
+import {DeliveryListComponent} from './delivery-list/delivery-list.component';
+import {DeliveryCreateComponent} from './delivery-create/delivery-create.component';
+import {DeliveryEditComponent} from './delivery-edit/delivery-edit.component';
 
-const routes: Routes = [];
+
+const routes: Routes = [{
+  path: '',
+  component: DeliveryManagementComponent,
+  children: [
+    {path: '', redirectTo: 'list', pathMatch: 'full'},
+    {path: 'list', component: DeliveryListComponent},
+    {path: 'create', component: DeliveryCreateComponent},
+    {path: ':id', component: DeliveryEditComponent}
+  ]
+}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
