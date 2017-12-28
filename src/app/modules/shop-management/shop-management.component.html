@@ -1,35 +1,8 @@
 
 <div class="row delivery-header">
   <div class="col-10">
-    <h4>Shop Management</h4>
-  </div>
-  <div class="col-2">
-    <button type="button" class="btn btn-primary">Add a new Shop</button>
+    <h2>Shop Management</h2>
   </div>
 </div>
-
-<div class="row">
-  <div class="col-12">
-    <table class="table table-secondary table-bordered table-hover">
-      <thead class="thead-dark">
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Type</th>
-        <th scope="col">Phone</th>
-        <th scope="col">Address</th>
-        <th scope="col">Pincode</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let shop of shops;">
-        <td>{{shop.name}}</td>
-        <td>{{shop.type}}</td>
-        <td>{{shop.phone}}</td>
-        <td>{{shop.address}}</td>
-        <td>{{shop.pincode}}</td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+<router-outlet></router-outlet>
 

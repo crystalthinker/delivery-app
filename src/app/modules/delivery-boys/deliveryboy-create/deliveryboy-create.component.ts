@@ -28,9 +28,7 @@ export class DeliveryboyCreateComponent implements OnInit {
     });
   }
   saveNewDeliveryBoy() {
-    console.log(this.deliveryBoyForm.value);
     this.service.addNewDeliveryBoy(this.deliveryBoyForm.value).subscribe(res => {
-      console.log(res);
       this.router.navigate(['/delivery-boys/list']);
     });
   }

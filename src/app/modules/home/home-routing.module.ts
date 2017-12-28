@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home.component';
-import {DeliveryBoysComponent} from '../delivery-boys/delivery-boys.component';
 import {DashboardComponent} from '../dashboard/dashboard.component';
 import {DeliveryManagementComponent} from '../delivery-management/delivery-management.component';
-import {ShopManagementComponent} from '../shop-management/shop-management.component';
 import {DeliveryBoysModule} from '../delivery-boys/delivery-boys.module';
+import {ShopManagementModule} from '../shop-management/shop-management.module';
 
 const routes: Routes = [{
   path: '',
@@ -15,7 +14,7 @@ const routes: Routes = [{
     {path: 'delivery-boys', loadChildren: () => DeliveryBoysModule},
     {path: 'dashboard', component: DashboardComponent},
     {path: 'delivery', component: DeliveryManagementComponent},
-    {path: 'shops', component: ShopManagementComponent}
+    {path: 'shops', loadChildren: () => ShopManagementModule}
   ]
 }];
 

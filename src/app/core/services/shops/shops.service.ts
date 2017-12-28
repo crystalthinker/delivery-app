@@ -15,4 +15,10 @@ export class ShopsService {
         return res;
       });
   }
+  public addNewShop(shopInfo): Observable<any> { // Update structutre
+    return this.http.post(CONFIG.urls.getShops, shopInfo)
+      .map((res: any) => {
+        return res;
+      });
+  }
 }

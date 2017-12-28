@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {DeliveryBoysService} from '../../core/services/delivery-boys/delivery-boys.service';
-import {ShopsService} from '../../core/services/shops/shops.service';
+import { Component, OnInit } from '@angular/core';;
 
 @Component({
   selector: 'app-shop-management',
@@ -8,13 +6,9 @@ import {ShopsService} from '../../core/services/shops/shops.service';
   styleUrls: ['./shop-management.component.scss']
 })
 export class ShopManagementComponent implements OnInit {
-  shops: any = [];
-  constructor(private service: ShopsService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.service.getAllShops().subscribe(shops => {
-      this.shops = shops;
-    });
   }
 
 }

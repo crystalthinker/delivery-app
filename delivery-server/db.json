@@ -119,6 +119,14 @@
       "address": "test address2222",
       "pincode": "695301",
       "phone": "9885531698"
+    },
+    {
+      "name": "Test_hotel123",
+      "type": "Hotel",
+      "address": "dfdff fvere vrfec ",
+      "pincode": "695022",
+      "phone": "9807654321",
+      "id": 7
     }
   ],
   "users": [
