@@ -13,6 +13,7 @@ const hostURL = getEnvironment(environment.production);
 export const CONFIG = {
   urls: {
     getDeliveryBoys: hostURL + 'delivery_boys',
-    getShops: hostURL + 'shops'
+    getShops: hostURL + 'shops',
+    getDelivery: hostURL + 'delivery'
   }
 };

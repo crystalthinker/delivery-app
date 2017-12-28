@@ -61,7 +61,8 @@
       "pincode":"695301"
     }
   ] ,
-  "shops":[{
+  "shops":[
+    {
     "id":1,
     "name":"vridhi",
     "type":"hotel",
@@ -104,7 +105,8 @@
     "pincode":"695301",
     "phone":"9885531698"
   }],
-  "users":[{
+  "users":[
+    {
       "id":1,
       "username":"abc_admin",
       "password":"abc_admin",
@@ -120,6 +122,33 @@
       "password":"abhi",
       "role": "delivery_boy"
     }
+  ],
+  "delivery":[
+    {
+      "id": "1",
+      "delivery_from": "vridhi",
+      "shop_id":"1",
+      "delivery_boy_id":"1",
+      "delivery_to": {
+        "customer_name":"",
+        "address":"",
+        "phone":""
+      },
+      "delivery_boy_assigned": "Sebastin Eschweiler",
+      "status": "completed"
+    },
+    {
+      "id": "2",
+      "delivery_from": "vridhi",
+      "shop_id":"1",
+      "delivery_boy_id":"3",
+      "delivery_to": {
+        "customer_name":"",
+        "address":"",
+        "phone":""
+      },
+      "delivery_boy_assigned": "Ann Smith",
+      "status": "delivery in progress"
+    }
   ]
-
 }

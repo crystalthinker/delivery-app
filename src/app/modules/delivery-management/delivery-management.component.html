@@ -1,5 +1,31 @@
-<div class="row">
-  <div class="col">
-    <h4>Delivery-management Todo!</h4>
+
+<div class="row delivery-header">
+  <div class="col-10">
+    <h4>Delivery</h4>
+  </div>
+  <div class="col-2">
+    <button type="button" class="btn btn-primary">Add new Delivery</button>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-12">
+    <table class="table table-secondary table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Delivery from</th>
+        <th scope="col">Delivery Boy Assigned</th>
+        <th scope="col">Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let delivery of deliveries;">
+        <td>{{delivery.delivery_from}}</td>
+        <td>{{delivery.delivery_boy_assigned}}</td>
+        <td>{{delivery.status}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
