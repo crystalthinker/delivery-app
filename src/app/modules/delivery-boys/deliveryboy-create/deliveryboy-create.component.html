@@ -1,3 +1,49 @@
-<p>
-  deliveryboy-create works!
-</p>
+<div class="row delivery-header">
+ <div class="col">
+   <h4> Please Fill in the Details of the new delivery boy:</h4>
+ </div>
+</div>
+<form [formGroup]="deliveryBoyForm" novalidate>
+  <div class="row">
+  <div class="form-group col-4">
+      <label class="center-block">First Name:
+        <input class="form-control" formControlName="first_name">
+      </label>
+    </div>
+    <div class="form-group col-4">
+    <label class="center-block">Last Name:
+      <input class="form-control" formControlName="last_name">
+    </label>
+    </div>
+    <div class="form-group col-4">
+    <label class="center-block">Email:
+      <input class="form-control" formControlName="email">
+    </label>
+    </div>
+    <div class="form-group col-4">
+    <label class="center-block">Phone:
+      <input class="form-control" formControlName="phone">
+    </label>
+    </div>
+    <div class="form-group col-4">
+      <label class="center-block">Status:
+        <input class="form-control" formControlName="status">
+      </label>
+    </div>
+    <div class="form-group col-4">
+     <label class="center-block">Address:
+       <textarea class="form-control" formControlName="address"></textarea>
+    </label>
+    </div>
+    <div class="form-group col-4">
+     <label class="center-block">Pincode:
+      <input class="form-control" formControlName="pincode">
+    </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <button type="submit" class="btn btn-primary" (click)="saveNewDeliveryBoy()">Save Delivery Boy Info</button>
+    </div>
+  </div>
+</form>

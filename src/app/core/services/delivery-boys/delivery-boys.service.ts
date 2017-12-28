@@ -14,4 +14,10 @@ export class DeliveryBoysService {
         return res;
       });
   }
+  public addNewDeliveryBoy(deliverBoyInfo): Observable<any> { // Update structutre
+    return this.http.post(CONFIG.urls.getDeliveryBoys, deliverBoyInfo)
+      .map((res: any) => {
+        return res;
+      });
+  }
 }

@@ -11,7 +11,7 @@ const routes: Routes = [{
   children: [
     {path: '', redirectTo: 'list', pathMatch: 'full'},
     {path: 'list', component: DeliveryboyListComponent},
-    {path: 'add', component: DeliveryboyCreateComponent},
+    {path: 'create', component: DeliveryboyCreateComponent},
     {path: ':id', component: DeliveryboyEditComponent}
   ]
 }];
