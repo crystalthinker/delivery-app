@@ -8,12 +8,14 @@ import { DeliveryboyListComponent } from './deliveryboy-list/deliveryboy-list.co
 import { DeliveryboyCreateComponent } from './deliveryboy-create/deliveryboy-create.component';
 import { DeliveryboyEditComponent } from './deliveryboy-edit/deliveryboy-edit.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     DeliveryBoysRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   declarations: [DeliveryBoysComponent, DeliveryboyListComponent, DeliveryboyCreateComponent, DeliveryboyEditComponent],
   providers: [DeliveryBoysService]

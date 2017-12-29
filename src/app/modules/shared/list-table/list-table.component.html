@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-12">
+    <table class="table table-secondary table-bordered table-hover">
+      <thead class="thead-dark">
+      <tr>
+        <th *ngFor="let header of headerData;" scope="col">
+          {{header}}
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let list of listData;">
+        <td *ngFor="let listkey of listKeys;" scope="col">
+          {{list[listkey]}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

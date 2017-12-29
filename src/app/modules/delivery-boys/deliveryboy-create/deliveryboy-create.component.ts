@@ -18,8 +18,7 @@ export class DeliveryboyCreateComponent implements OnInit {
   }
   createForm() {
     this.deliveryBoyForm = this.fb.group({
-      first_name: '',
-      last_name: '',
+      name: '',
       email: '',
       phone: '',
       status: '',
