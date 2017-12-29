@@ -6,42 +6,41 @@
 <form [formGroup]="deliveryBoyForm" novalidate>
   <div class="row">
    <div class="form-group col-4">
-      <label class="center-block">Name:
+      <label class="center-block">Name:</label>
         <input class="form-control" formControlName="name">
-      </label>
-    </div>
+     <small class="form-text error-text" *ngIf="deliveryBoyForm.controls['name'].errors && deliveryBoyForm.controls['name'].touched">Required Field</small>
+   </div>
     <div class="form-group col-4">
-    <label class="center-block">Email:
+    <label class="center-block">Email:</label>
       <input type="email" class="form-control" formControlName="email">
-    </label>
+      <small class="form-text error-text" *ngIf="deliveryBoyForm.controls['email'].errors && deliveryBoyForm.controls['email'].touched">Required Field</small>
     </div>
     <div class="form-group col-4">
-    <label class="center-block">Phone:
-      <input class="form-control" formControlName="phone">
-    </label>
+    <label class="center-block">Phone:</label>
+      <input type="tel" class="form-control" formControlName="phone">
+      <small class="form-text error-text" *ngIf="deliveryBoyForm.controls['phone'].errors && deliveryBoyForm.controls['phone'].touched">Required Field</small>
+
     </div>
     <div class="form-group col-4">
-      <label class="center-block">Status:
+      <label class="center-block">Status:</label>
         <select class="form-control" formControlName="status">
           <option>available</option>
           <option>inactive</option>
         </select>
-      </label>
     </div>
     <div class="form-group col-4">
-     <label class="center-block">Address:
+     <label class="center-block">Address:</label>
        <textarea class="form-control" formControlName="address" rows="3"></textarea>
-    </label>
     </div>
     <div class="form-group col-4">
-     <label class="center-block">Pincode:
+     <label class="center-block">Pincode:</label>
       <input class="form-control" formControlName="pincode">
-    </label>
+      <small class="form-text error-text" *ngIf="deliveryBoyForm.controls['pincode'].errors && deliveryBoyForm.controls['pincode'].touched">Required Field</small>
     </div>
   </div>
   <div class="row">
     <div class="col-6">
-      <button type="submit" class="btn btn-primary" (click)="saveNewDeliveryBoy()">Save Delivery Boy Info</button>
+      <button type="submit" class="btn btn-primary" (click)="saveNewDeliveryBoy()" [disabled]="!deliveryBoyForm.valid">Save Delivery Boy Info</button>
     </div>
   </div>
 </form>

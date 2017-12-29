@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ShopsService} from '../../../core/services/shops/shops.service';
 
 @Component({
@@ -18,11 +18,11 @@ export class ShopCreateComponent implements OnInit {
   }
   createForm() {
     this.shopForm = this.fb.group({
-      name: '',
-      type: '',
-      address: '',
-      pincode: '',
-      phone: ''
+      name: ['', [Validators.required]],
+      type: ['hotel', [Validators.required]],
+      address: ['', [Validators.required]],
+      pincode: ['', [Validators.required]],
+      phone: ['', [Validators.required]],
     });
   }
   saveNewShop() {
