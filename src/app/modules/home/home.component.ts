@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DeliveryBoysService} from '../../core/services/delivery-boys/delivery-boys.service';
 
 @Component({
   selector: 'app-home',
@@ -11,5 +12,4 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

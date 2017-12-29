@@ -1,22 +1,203 @@
 {
-  "employees": [
+  "delivery_boys": [
     {
       "id": 1,
       "first_name": "Sebastian",
       "last_name": "Eschweiler",
-      "email": "sebastian@codingthesmartway.com"
+      "email": "sebastian@abcdelivery.com",
+      "phone": "9557735467",
+      "status": "engaged",
+      "address": "test address",
+      "pincode": "695022"
     },
     {
       "id": 2,
       "first_name": "Steve",
       "last_name": "Palmer",
-      "email": "steve@codingthesmartway.com"
+      "email": "steve@abcdelivery.com",
+      "phone": "9557735468",
+      "status": "available",
+      "address": "test address",
+      "pincode": "695301"
     },
     {
       "id": 3,
       "first_name": "Ann",
       "last_name": "Smith",
-      "email": "ann@codingthesmartway.com"
+      "email": "ann@abcdelivery.com",
+      "phone": "9557735469",
+      "status": "engaged",
+      "address": "test address",
+      "pincode": "695022"
+    },
+    {
+      "id": 4,
+      "first_name": "John",
+      "last_name": "Eschweiler",
+      "email": "john@abcdelivery.com",
+      "phone": "9557735467",
+      "status": "available",
+      "address": "test address",
+      "pincode": "695022"
+    },
+    {
+      "id": 5,
+      "first_name": "Ram",
+      "last_name": "Palmer",
+      "email": "ram@abcdelivery.com",
+      "phone": "9587735468",
+      "status": "available",
+      "address": "test address",
+      "pincode": "695022"
+    },
+    {
+      "id": 6,
+      "first_name": "Sam",
+      "last_name": "Smith",
+      "email": "sam@abcdelivery.com",
+      "phone": "9587735469",
+      "status": "available",
+      "address": "test address",
+      "pincode": "695301"
+    },
+    {
+      "first_name": "test_abhi",
+      "last_name": "dsfs",
+      "email": "test_abhi@abcdelivery.com",
+      "phone": "9087654321",
+      "status": "available",
+      "address": "cvsffs fevfvdet fvtvdvvg",
+      "pincode": "695022",
+      "id": 7
+    },
+    {
+      "first_name": "test boy",
+      "last_name": "sdsd",
+      "email": "abx@abcdelivery.com",
+      "phone": "9807654321",
+      "status": "available",
+      "address": "dsdsf",
+      "pincode": "670301",
+      "id": 8
+    }
+  ],
+  "shops": [
+    {
+      "id": 1,
+      "name": "vridhi",
+      "type": "hotel",
+      "address": "test address",
+      "pincode": "695022",
+      "phone": "9885531678"
+    },
+    {
+      "id": 2,
+      "name": "pepperfry",
+      "type": "furniture",
+      "address": "test address123",
+      "pincode": "695301",
+      "phone": "9887531678"
+    },
+    {
+      "id": 3,
+      "name": "test_shop",
+      "type": "stationary",
+      "address": "test address2222",
+      "pincode": "695022",
+      "phone": "9885551678"
+    },
+    {
+      "id": 4,
+      "name": "vridhi121",
+      "type": "hotel",
+      "address": "test address",
+      "pincode": "695022",
+      "phone": "9885931678"
+    },
+    {
+      "id": 5,
+      "name": "pepperfryw2w22",
+      "type": "furniture",
+      "address": "test address123",
+      "pincode": "695301",
+      "phone": "9885539678"
+    },
+    {
+      "id": 6,
+      "name": "test_shop12112",
+      "type": "stationary",
+      "address": "test address2222",
+      "pincode": "695301",
+      "phone": "9885531698"
+    },
+    {
+      "name": "Test_hotel123",
+      "type": "Hotel",
+      "address": "dfdff fvere vrfec ",
+      "pincode": "695022",
+      "phone": "9807654321",
+      "id": 7
+    }
+  ],
+  "users":
+    {
+      "id": 1,
+      "username": "abc_admin",
+      "password": "abc_admin",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "test",
+      "password": "test",
+      "role": "delivery_boy"
+    },
+    {
+      "id": 3,
+      "username": "abhi",
+      "password": "abhi",
+      "role": "delivery_boy"
+    }
+  ],
+  "delivery": [
+    {
+      "id": "1",
+      "delivery_from": "vridhi",
+      "shop_id": "1",
+      "delivery_boy_id": "1",
+      "delivery_to": {
+        "customer_name": "",
+        "address": "",
+        "phone": ""
+      },
+      "delivery_boy_assigned": "Sebastin Eschweiler",
+      "status": "Awaiting pickup"
+    },
+    {
+      "id": "2",
+      "delivery_from": "vridhi",
+      "shop_id": "1",
+      "delivery_boy_id": "3",
+      "delivery_to": {
+        "customer_name": "",
+        "address": "",
+        "phone": ""
+      },
+      "delivery_boy_assigned": "Ann Smith",
+      "status": "Out for delivery"
+    },
+    {
+      "id": "3",
+      "delivery_from": "test_shop",
+      "shop_id": "3",
+      "delivery_boy_id": "5",
+      "delivery_to": {
+        "customer_name": "",
+        "address": "",
+        "phone": ""
+      },
+      "delivery_boy_assigned": "Ram Palmer",
+      "status": "Delivered"
     }
   ]
 }
