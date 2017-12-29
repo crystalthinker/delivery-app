@@ -6,12 +6,12 @@ import {DeliveryManagementComponent} from '../delivery-management/delivery-manag
 import {DeliveryBoysModule} from '../delivery-boys/delivery-boys.module';
 import {ShopManagementModule} from '../shop-management/shop-management.module';
 import {DeliveryManagementModule} from '../delivery-management/delivery-management.module';
-import {LoggedUserGaurd} from '../../core/gaurds/logged-user.gaurd';
+import {LoggedUserGuard} from '../../core/guards/logged-user.guard';
 
 const routes: Routes = [{
   path: '',
   component: HomeComponent,
-  canActivate: [LoggedUserGaurd],
+  canActivate: [LoggedUserGuard],
   children: [
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
     {path: 'delivery-boys', loadChildren: () => DeliveryBoysModule},
