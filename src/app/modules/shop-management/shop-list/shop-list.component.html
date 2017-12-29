@@ -3,27 +3,5 @@
     <button type="button" class="btn btn-primary float-right" [routerLink]="['/shops/create']">Add a new Shop</button>
   </div>
 </div>
-<div class="row">
-  <div class="col-12">
-    <table class="table table-secondary table-bordered table-hover">
-      <thead class="thead-dark">
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Type</th>
-        <th scope="col">Phone</th>
-        <th scope="col">Address</th>
-        <th scope="col">Pincode</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let shop of shops;">
-        <td>{{shop.name}}</td>
-        <td>{{shop.type}}</td>
-        <td>{{shop.phone}}</td>
-        <td>{{shop.address}}</td>
-        <td>{{shop.pincode}}</td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+<app-list-table [headerData]="headerData" [listData]="shops" [listKeys]="listKeys"></app-list-table>
+

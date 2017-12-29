@@ -6,34 +6,38 @@
 <form [formGroup]="shopForm" novalidate>
   <div class="row">
     <div class="form-group col-4">
-      <label class="center-block">Name:
+      <label class="center-block">Name: </label>
         <input class="form-control" formControlName="name">
-      </label>
+        <small class="form-text error-text" *ngIf="shopForm.controls['name'].errors && shopForm.controls['name'].touched">Required Field</small>
     </div>
     <div class="form-group col-4">
-      <label class="center-block">Type:
-        <input class="form-control" formControlName="type">
-      </label>
+      <label class="center-block">Type:</label>
+        <select class="form-control" formControlName="type">
+          <option>hotel</option>
+          <option>furniture</option>
+          <option>stationary</option>
+        </select>
+      <small class="form-text error-text" *ngIf="shopForm.controls['type'].errors && shopForm.controls['type'].touched">Required Field</small>
     </div>
     <div class="form-group col-4">
-      <label class="center-block">Phone:
+      <label class="center-block">Phone: </label>
         <input class="form-control" formControlName="phone">
-      </label>
+      <small class="form-text error-text" *ngIf="shopForm.controls['phone'].errors && shopForm.controls['phone'].touched">Required Field</small>
     </div>
     <div class="form-group col-4">
-      <label class="center-block">Address:
+      <label class="center-block">Address:</label>
         <textarea class="form-control" formControlName="address"></textarea>
-      </label>
+      <small class="form-text error-text" *ngIf="shopForm.controls['address'].errors && shopForm.controls['address'].touched">Required Field</small>
     </div>
     <div class="form-group col-4">
-      <label class="center-block">Pincode:
+      <label class="center-block">Pincode: </label>
         <input class="form-control" formControlName="pincode">
-      </label>
+      <small class="form-text error-text" *ngIf="shopForm.controls['pincode'].errors && shopForm.controls['pincode'].touched">Required Field</small>
     </div>
   </div>
   <div class="row">
     <div class="col-6">
-      <button type="submit" class="btn btn-primary" (click)="saveNewShop()">Save Shop Info</button>
+      <button type="submit" class="btn btn-primary" (click)="saveNewShop()" [disabled]="!shopForm.valid">Save Shop Info</button>
     </div>
   </div>
 </form>

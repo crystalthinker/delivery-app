@@ -7,11 +7,13 @@ import {DeliveryService} from '../../core/services/delivery/delivery.service';
 import { DeliveryCreateComponent } from './delivery-create/delivery-create.component';
 import { DeliveryEditComponent } from './delivery-edit/delivery-edit.component';
 import { DeliveryListComponent } from './delivery-list/delivery-list.component';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    DeliveryManagementRoutingModule
+    DeliveryManagementRoutingModule,
+    SharedModule
   ],
   declarations: [DeliveryManagementComponent, DeliveryCreateComponent, DeliveryEditComponent, DeliveryListComponent],
   providers: [DeliveryService]

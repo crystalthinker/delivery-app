@@ -2,8 +2,7 @@
   "delivery_boys": [
     {
       "id": 1,
-      "first_name": "Sebastian",
-      "last_name": "Eschweiler",
+      "name": "Sebastian Eschweiler",
       "email": "sebastian@abcdelivery.com",
       "phone": "9557735467",
       "status": "engaged",
@@ -12,8 +11,7 @@
     },
     {
       "id": 2,
-      "first_name": "Steve",
-      "last_name": "Palmer",
+      "name": "Steve Palmer",
       "email": "steve@abcdelivery.com",
       "phone": "9557735468",
       "status": "available",
@@ -22,8 +20,7 @@
     },
     {
       "id": 3,
-      "first_name": "Ann",
-      "last_name": "Smith",
+      "name": "Ann Smith",
       "email": "ann@abcdelivery.com",
       "phone": "9557735469",
       "status": "engaged",
@@ -32,8 +29,7 @@
     },
     {
       "id": 4,
-      "first_name": "John",
-      "last_name": "Eschweiler",
+      "name": "John Eschweiler",
       "email": "john@abcdelivery.com",
       "phone": "9557735467",
       "status": "available",
@@ -42,8 +38,7 @@
     },
     {
       "id": 5,
-      "first_name": "Ram",
-      "last_name": "Palmer",
+      "name": "Ram Palmer",
       "email": "ram@abcdelivery.com",
       "phone": "9587735468",
       "status": "available",
@@ -52,8 +47,7 @@
     },
     {
       "id": 6,
-      "first_name": "Sam",
-      "last_name": "Smith",
+      "name": "Sam Smith",
       "email": "sam@abcdelivery.com",
       "phone": "9587735469",
       "status": "available",
@@ -61,8 +55,7 @@
       "pincode": "695301"
     },
     {
-      "first_name": "test_abhi",
-      "last_name": "dsfs",
+      "name": "test_abhi dsfs",
       "email": "test_abhi@abcdelivery.com",
       "phone": "9087654321",
       "status": "available",
@@ -71,8 +64,7 @@
       "id": 7
     },
     {
-      "first_name": "test boy",
-      "last_name": "sdsd",
+      "name": "test boy sdsd",
       "email": "abx@abcdelivery.com",
       "phone": "9807654321",
       "status": "available",
@@ -139,7 +131,7 @@
       "id": 7
     }
   ],
-  "users": [
+  "users":[
     {
       "id": 1,
       "username": "abc_admin",
