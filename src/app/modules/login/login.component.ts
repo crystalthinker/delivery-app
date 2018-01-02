@@ -27,15 +27,14 @@ export class LoginComponent implements OnInit {
   }
 
   public loginForm() {
-      let role;
       this.service.login(this.loginFormGroup.value.username, this.loginFormGroup.value.password)
         .subscribe(data => {
-            if(data.length) {
-               data.filter((item)=> role = item.role);
-               if(role == 'delivery_boy') {
+            if(data) {
+               this.service.emitCheckLoggedIn(data.role);
+               if(data.role == 'delivery_boy') {
+                   //this.router.navigate(['/']);
+               } else if(data.role === 'admin') {
                    this.router.navigate(['/']);
-               } else if(role === 'admin') {
-
                }
             } else {
                 this.validLogin = false;
