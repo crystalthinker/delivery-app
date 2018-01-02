@@ -36,12 +36,20 @@ export class DeliveryCreateComponent implements OnInit {
       "delivery_boy_assigned": "Sebastin Eschweiler",
       "status": "Awaiting pickup"
     },*/
+    let self = this;
     this.deliveryForm = this.fb.group({
       shop_id: ['', [Validators.required]],
+      delivery_to: self.fb.group({
+        customer_name: ['', [Validators.required]],
+        address: ['', [Validators.required]],
+        phone: ['', [Validators.required]],
+        pincode: ['', [Validators.required]],
+      })
     });
   }
   onShopChange(shopId) {
     if ( shopId ) {
+      // TODO fetch hotel name and other details with id
       console.log('here', shopId);
     }
 
