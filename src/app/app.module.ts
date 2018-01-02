@@ -8,6 +8,7 @@ import {HomeModule} from './modules/home/home.module';
 import {CoreModule} from './core/core.module';
 import {LoginModule} from './modules/login/login.module';
 import {LoggedUserGuard} from './core/guards/logged-user.guard';
+import {AuthGuard} from './core/guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import {LoggedUserGuard} from './core/guards/logged-user.guard';
     HomeModule,
     RouterModule.forRoot(APP_ROUTES),
   ],
-  providers: [LoggedUserGuard],
+  providers: [LoggedUserGuard, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
