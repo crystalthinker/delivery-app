@@ -15,6 +15,14 @@ export class ShopsService {
         return res;
       });
   }
+  public getAShop(id): Observable<any> {
+    const url = CONFIG.urls.getShops + '/' + id;
+    // Update structutre
+    return this.http.get(url)
+      .map((res: any) => {
+        return res;
+      });
+  }
   public addNewShop(shopInfo): Observable<any> { // Update structutre
     return this.http.post(CONFIG.urls.getShops, shopInfo)
       .map((res: any) => {

@@ -1,3 +1,49 @@
-<p>
-  delivery-create works!
-</p>
+<div class="row delivery-header">
+ <div class="col">
+   <h4> Please Fill in the Details of the new delivery:</h4>
+ </div>
+</div>
+<form [formGroup]="deliveryForm" novalidate>
+  <div class="row">
+   <div class="form-group col-4">
+      <label class="center-block">Shop Name:</label>
+      <select class="form-control" formControlName="shop_id" (change)="onShopChange($event.target.value)">
+        <option value=""></option>
+        <option *ngFor="let shop of shops" [value]="shop.id" >{{shop.name}}</option>
+      </select>
+     <small class="form-text error-text" *ngIf="deliveryForm.controls['shop_id'].errors && deliveryForm.controls['shop_id'].touched">Required Field</small>
+   </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h4>Delivery Customer Details:-</h4>
+    </div>
+  </div>
+  <div  class="row" formGroupName="delivery_to">
+    <div class="form-group col-4">
+      <label class="center-block">Customer Name:</label>
+      <input class="form-control" formControlName="customer_name">
+      <small class="form-text error-text" *ngIf="deliveryForm.controls['delivery_to'].controls['customer_name'].errors && deliveryForm.controls['delivery_to'].controls['customer_name'].touched">Required Field</small>
+    </div>
+    <div class="form-group col-4">
+      <label class="center-block">Address:</label>
+      <textarea class="form-control" formControlName="address"></textarea>
+      <small class="form-text error-text" *ngIf="deliveryForm.controls['delivery_to'].controls['address'].errors && deliveryForm.controls['delivery_to'].controls['address'].touched">Required Field</small>
+    </div>
+    <div class="form-group col-4" >
+      <label class="center-block">Phone:</label>
+      <input class="form-control" formControlName="phone">
+      <small class="form-text error-text" *ngIf="deliveryForm.controls['delivery_to'].controls['phone'].errors && deliveryForm.controls['delivery_to'].controls['phone'].touched">Required Field</small>
+    </div>
+     <div class="form-group col-4" >
+      <label class="center-block">Pincode:</label>
+      <input class="form-control" formControlName="pincode">
+      <small class="form-text error-text" *ngIf="deliveryForm.controls['delivery_to'].controls['pincode'].errors && deliveryForm.controls['delivery_to'].controls['pincode'].touched">Required Field</small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <button type="submit" class="btn btn-primary" (click)="saveNewDelivery()" [disabled]="!deliveryForm.valid">Save Delivery Info</button>
+    </div>
+  </div>
+</form>
