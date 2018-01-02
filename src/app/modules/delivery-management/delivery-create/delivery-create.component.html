@@ -9,7 +9,7 @@
       <label class="center-block">Shop Name:</label>
       <select class="form-control" formControlName="shop_id" (change)="onShopChange($event.target.value)">
         <option value=""></option>
-        <option *ngFor="let shop of shops" [value]="shop.id">{{shop.name}}</option>
+        <option *ngFor="let shop of shops" [value]="shop.id" >{{shop.name}}</option>
       </select>
      <small class="form-text error-text" *ngIf="deliveryForm.controls['shop_id'].errors && deliveryForm.controls['shop_id'].touched">Required Field</small>
    </div>
@@ -43,7 +43,7 @@
   </div>
   <div class="row">
     <div class="col-6">
-      <button type="submit" class="btn btn-primary" (click)="saveNewDelivery()" [disabled]="!deliveryForm.valid">Save Delivery Boy Info</button>
+      <button type="submit" class="btn btn-primary" (click)="saveNewDelivery()" [disabled]="!deliveryForm.valid">Save Delivery Info</button>
     </div>
   </div>
 </form>
