@@ -7,7 +7,7 @@ import {APP_ROUTES} from './app-routing.module';
 import {HomeModule} from './modules/home/home.module';
 import {CoreModule} from './core/core.module';
 import {LoginModule} from './modules/login/login.module';
-
+import {LoggedUserGuard} from './core/guards/logged-user.guard';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import {LoginModule} from './modules/login/login.module';
     HomeModule,
     RouterModule.forRoot(APP_ROUTES),
   ],
-  providers: [],
+  providers: [LoggedUserGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
