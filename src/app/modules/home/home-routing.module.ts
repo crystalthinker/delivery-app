@@ -21,7 +21,7 @@ const routes: Routes = [{
       loadChildren: () => DeliveryBoysModule,
       data: {
         breadcrumb: 'Delivery Boys'
-      }
+      },
     },
     {
       path: 'dashboard',
@@ -35,13 +35,13 @@ const routes: Routes = [{
       loadChildren: () => DeliveryManagementModule,
       data: {
         breadcrumb: 'Delivery'
-      }
+      },
     },
     {
       path: 'shops', loadChildren: () => ShopManagementModule,
       data: {
         breadcrumb: 'Shops'
-      }
+      },
     }
   ],
   data: {
