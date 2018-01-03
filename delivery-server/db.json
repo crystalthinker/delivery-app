@@ -160,7 +160,8 @@
       "delivery_to": {
         "customer_name": "",
         "address": "",
-        "phone": ""
+        "phone": "",
+        "pincode":""
       },
       "delivery_boy_assigned": "Sebastin Eschweiler",
       "status": "Awaiting pickup"
@@ -173,7 +174,8 @@
       "delivery_to": {
         "customer_name": "",
         "address": "",
-        "phone": ""
+        "phone": "",
+        "pincode":""
       },
       "delivery_boy_assigned": "Ann Smith",
       "status": "Out for delivery"
@@ -186,7 +188,8 @@
       "delivery_to": {
         "customer_name": "",
         "address": "",
-        "phone": ""
+        "phone": "",
+        "pincode":""
       },
       "delivery_boy_assigned": "Ram Palmer",
       "status": "Delivered"

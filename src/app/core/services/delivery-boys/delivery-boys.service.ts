@@ -14,8 +14,26 @@ export class DeliveryBoysService {
         return res;
       });
   }
+
+  public getFilteredDeliveryBoysList(status, pincode): Observable<any> {
+    const url = `${CONFIG.urls.getDeliveryBoys}?status=${status}&pincode=${pincode}`;
+    // Update structutre
+    return this.http.get(url)
+      .map((res: any) => {
+        return res;
+      });
+  }
+
   public addNewDeliveryBoy(deliverBoyInfo): Observable<any> { // Update structutre
     return this.http.post(CONFIG.urls.getDeliveryBoys, deliverBoyInfo)
+      .map((res: any) => {
+        return res;
+      });
+  }
+  public updateDeliveryBoyStatus(id, deliverBoyInfo): Observable<any> {
+    // Update structutre
+    const url = CONFIG.urls.getDeliveryBoys + '/' + id;
+    return this.http.put(url, deliverBoyInfo)
       .map((res: any) => {
         return res;
       });
