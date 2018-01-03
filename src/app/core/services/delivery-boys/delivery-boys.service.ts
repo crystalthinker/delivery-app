@@ -8,8 +8,9 @@ import 'rxjs/add/operator/map';
 export class DeliveryBoysService {
 
   constructor(private http: HttpClient) { }
-  public getAllDeliveryBoys(): Observable<any> { // Update structutre
-    return this.http.get(CONFIG.urls.getDeliveryBoys)
+  public getAllDeliveryBoys(): Observable<any> {
+    const url = CONFIG.urls.getDeliveryBoys + '?_sort=id&_order=desc';
+    return this.http.get(url)
       .map((res: any) => {
         return res;
       });

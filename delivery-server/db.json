@@ -71,6 +71,15 @@
       "address": "dsdsf",
       "pincode": "670301",
       "id": 8
+    },
+    {
+      "name": "testUser123",
+      "email": "test@abcdelivery.com",
+      "phone": "9889987654",
+      "status": "available",
+      "address": "hjjtjuy",
+      "pincode": "695022",
+      "id": 9
     }
   ],
   "shops": [

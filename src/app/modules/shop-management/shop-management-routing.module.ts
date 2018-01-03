@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import {ShopManagementComponent} from './shop-management.component';
 import {ShopListComponent} from './shop-list/shop-list.component';
 import {ShopEditComponent} from './shop-edit/shop-edit.component';
@@ -11,8 +11,18 @@ const routes: Routes = [{
   component: ShopManagementComponent,
   children: [
     {path: '', redirectTo: 'list', pathMatch: 'full'},
-    {path: 'list', component: ShopListComponent},
-    {path: 'create', component: ShopCreateComponent},
+    {
+      path: 'list', component: ShopListComponent,
+      data: {
+        breadcrumb: 'List'
+      }
+    },
+    {
+      path: 'create', component: ShopCreateComponent,
+      data: {
+        breadcrumb: 'Create'
+      }
+    },
     {path: ':id', component: ShopEditComponent}
   ]
 }];
@@ -21,4 +31,5 @@ const routes: Routes = [{
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ShopManagementRoutingModule { }
+export class ShopManagementRoutingModule {
+}
