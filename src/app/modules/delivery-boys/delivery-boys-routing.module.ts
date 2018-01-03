@@ -14,15 +14,16 @@ const routes: Routes = [{
       path: 'list', component: DeliveryboyListComponent,
       data: {
         breadcrumb: 'List'
-      }
+      },
     },
     {
       path: 'create', component: DeliveryboyCreateComponent,
       data: {
         breadcrumb: 'Create'
-      }
+      },
     },
-    {path: 'detail/:id', component: DeliveryboyEditComponent}
+    {path: 'detail/:id', component: DeliveryboyEditComponent,
+    }
   ]
 }];
 
