@@ -45,9 +45,23 @@ export class LoginService {
       }
   }
 
+  public deliveryBoyRole() {
+      let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      if(currentUser.role == 'delivery_boy') {
+          return true;
+      } else {
+          return false;
+      }
+  }
+
   public logOutUser() {
       if(localStorage.getItem('currentUser') !== null) {
           localStorage.removeItem('currentUser');
       }
+  }
+
+  public currentUser() {
+      let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      return currentUser;
   }
 }

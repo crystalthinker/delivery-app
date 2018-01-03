@@ -31,10 +31,10 @@ export class LoginComponent implements OnInit {
         .subscribe(data => {
             if(data) {
                this.service.emitCheckLoggedIn(data.role);
-               if(data.role == 'delivery_boy') {
-                   //this.router.navigate(['/']);
+               if(data.role === 'delivery_boy') {
+                   this.router.navigate(['/deliveryboy-dashboard']);
                } else if(data.role === 'admin') {
-                   this.router.navigate(['/']);
+                   this.router.navigate(['/dashboard']);
                }
             } else {
                 this.validLogin = false;

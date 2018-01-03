@@ -7,38 +7,50 @@ import {DeliveryBoysModule} from '../delivery-boys/delivery-boys.module';
 import {ShopManagementModule} from '../shop-management/shop-management.module';
 import {DeliveryManagementModule} from '../delivery-management/delivery-management.module';
 import {LoggedUserGuard} from '../../core/guards/logged-user.guard';
-import {AuthGuard} from '../../core/guards/auth.guard';
+import {DeliveryboyViewModule} from '../deliveryboy-view/deliveryboy-view.module';
+import {RoleGuard} from '../../core/guards/role.guard';
+import {DeliveryboyRoleGuard} from '../../core/guards/deliveryboy-role.guard';
 
 const routes: Routes = [{
   path: '',
   component: HomeComponent,
   canActivate: [LoggedUserGuard],
-  canActivateChild: [AuthGuard],
   children: [
-    {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
     {
       path: 'delivery-boys',
       loadChildren: () => DeliveryBoysModule,
+      canActivate: [RoleGuard],
       data: {
         breadcrumb: 'Delivery Boys'
-      }
+    }
     },
     {
       path: 'dashboard',
       component: DashboardComponent,
+      canActivate: [RoleGuard],
       data: {
         breadcrumb: 'Dashboard'
       }
     },
     {
+      path: 'deliveryboy-dashboard',
+      loadChildren: () => DeliveryboyViewModule,
+      canActivate: [DeliveryboyRoleGuard],
+      data: {
+        breadcrumb: 'Delivery Boy'
+      }
+    },
+    {
       path: 'delivery',
       loadChildren: () => DeliveryManagementModule,
+      canActivate: [RoleGuard],
       data: {
         breadcrumb: 'Delivery'
       }
     },
     {
       path: 'shops', loadChildren: () => ShopManagementModule,
+      canActivate: [RoleGuard],
       data: {
         breadcrumb: 'Shops'
       }

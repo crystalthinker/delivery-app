@@ -22,11 +22,11 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
       this.subscription.unsubscribe();
   }
-  
+
   public isUserLoggedIn() {
       this.subscription = this.loginService.checkLogin
-          .subscribe(item => {
-              if(item == 'admin' || item == 'delivery_boy') {
+          .subscribe(role => {
+              if(role == 'admin' || role == 'delivery_boy') {
                   this.checkLogin = true;
               }
           });
