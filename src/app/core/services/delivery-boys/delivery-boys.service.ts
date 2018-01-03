@@ -39,4 +39,19 @@ export class DeliveryBoysService {
         return res;
       });
   }
+
+  public getId() {
+      let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      if(currentUser.role = 'delivery_boy') {
+          return currentUser.delivery_boy_Id;
+      }
+  }
+
+  public getBoy(id): Observable<any> {
+      const url = CONFIG.urls.getDeliveryBoys + '/' + id;
+      return this.http.get(url)
+                .map((res:any) => {
+                    return res;
+                });
+  }
 }

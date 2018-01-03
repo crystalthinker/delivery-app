@@ -151,7 +151,8 @@
       "id": 2,
       "username": "test",
       "password": "test",
-      "role": "delivery_boy"
+      "role": "delivery_boy",
+      "delivery_boy_Id": 1
     },
     {
       "id": 3,
