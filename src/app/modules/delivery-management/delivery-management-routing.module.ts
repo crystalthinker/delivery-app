@@ -19,7 +19,7 @@ const routes: Routes = [{
       data: {
         breadcrumb: 'Create'
       }},
-    { path: ':id',
+    { path: 'detail/:id',
       component: DeliveryEditComponent,
     }
   ]

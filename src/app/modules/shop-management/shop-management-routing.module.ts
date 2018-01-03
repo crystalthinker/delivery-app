@@ -23,7 +23,7 @@ const routes: Routes = [{
         breadcrumb: 'Create'
       }
     },
-    {path: ':id', component: ShopEditComponent}
+    {path: 'detail/:id', component: ShopEditComponent}
   ]
 }];
 
