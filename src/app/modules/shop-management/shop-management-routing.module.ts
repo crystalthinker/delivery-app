@@ -10,9 +10,8 @@ const routes: Routes = [{
   path: '',
   component: ShopManagementComponent,
   children: [
-    {path: '', redirectTo: 'list', pathMatch: 'full'},
     {
-      path: 'list', component: ShopListComponent,
+      path: '', component: ShopListComponent,
       data: {
         breadcrumb: 'List'
       }

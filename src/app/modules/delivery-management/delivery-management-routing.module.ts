@@ -10,8 +10,7 @@ const routes: Routes = [{
   path: '',
   component: DeliveryManagementComponent,
   children: [
-    {path: '', redirectTo: 'list', pathMatch: 'full'},
-    {path: 'list', component: DeliveryListComponent,
+    {path: '', component: DeliveryListComponent,
       data: {
         breadcrumb: 'List'
       }},

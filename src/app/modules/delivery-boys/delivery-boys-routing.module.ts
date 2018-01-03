@@ -9,9 +9,8 @@ const routes: Routes = [{
   path: '',
   component: DeliveryBoysComponent,
   children: [
-    {path: '', redirectTo: 'list', pathMatch: 'full'},
     {
-      path: 'list', component: DeliveryboyListComponent,
+      path: '', component: DeliveryboyListComponent,
       data: {
         breadcrumb: 'List'
       },

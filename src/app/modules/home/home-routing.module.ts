@@ -23,7 +23,7 @@ const routes: Routes = [{
       data: {
         breadcrumb: 'Delivery Boys'
     }
-    },
+      },
     {
       path: 'dashboard',
       component: DashboardComponent,
@@ -46,14 +46,14 @@ const routes: Routes = [{
       canActivate: [RoleGuard],
       data: {
         breadcrumb: 'Delivery'
-      }
+      },
     },
     {
       path: 'shops', loadChildren: () => ShopManagementModule,
       canActivate: [RoleGuard],
       data: {
         breadcrumb: 'Shops'
-      }
+      },
     }
   ],
   data: {
