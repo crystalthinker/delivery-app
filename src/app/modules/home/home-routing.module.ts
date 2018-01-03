@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './home.component';
 import {DashboardComponent} from '../dashboard/dashboard.component';
 import {DeliveryManagementComponent} from '../delivery-management/delivery-management.component';
@@ -16,15 +16,42 @@ const routes: Routes = [{
   canActivateChild: [AuthGuard],
   children: [
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-    {path: 'delivery-boys', loadChildren: () => DeliveryBoysModule},
-    {path: 'dashboard', component: DashboardComponent},
-    {path: 'delivery', loadChildren: () => DeliveryManagementModule},
-    {path: 'shops', loadChildren: () => ShopManagementModule}
-  ]
+    {
+      path: 'delivery-boys',
+      loadChildren: () => DeliveryBoysModule,
+      data: {
+        breadcrumb: 'Delivery Boys'
+      }
+    },
+    {
+      path: 'dashboard',
+      component: DashboardComponent,
+      data: {
+        breadcrumb: 'Dashboard'
+      }
+    },
+    {
+      path: 'delivery',
+      loadChildren: () => DeliveryManagementModule,
+      data: {
+        breadcrumb: 'Delivery'
+      }
+    },
+    {
+      path: 'shops', loadChildren: () => ShopManagementModule,
+      data: {
+        breadcrumb: 'Shops'
+      }
+    }
+  ],
+  data: {
+    breadcrumb: 'App'
+  }
 }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HomeRoutingModule { }
+export class HomeRoutingModule {
+}

@@ -13,14 +13,7 @@ import {DeliveryBoysService} from '../../../core/services/delivery-boys/delivery
 export class DeliveryCreateComponent implements OnInit {
   deliveryForm: FormGroup;
   shops: any = [];
-  selectedShop: object = {
-      id: '',
-      name: '',
-      type: '',
-      address: '',
-      pincode: '',
-      phone: ''
-    };
+  selectedShop: any;
   constructor(private fb: FormBuilder,
               private service: DeliveryService,
               private shopService: ShopsService,

@@ -50,7 +50,7 @@
       "name": "Sam Smith",
       "email": "sam@abcdelivery.com",
       "phone": "9587735469",
-      "status": "available",
+      "status": "engaged",
       "address": "test address",
       "pincode": "695301"
     },
@@ -71,6 +71,15 @@
       "address": "dsdsf",
       "pincode": "670301",
       "id": 8
+    },
+    {
+      "name": "testUser123",
+      "email": "test@abcdelivery.com",
+      "phone": "9889987654",
+      "status": "available",
+      "address": "hjjtjuy",
+      "pincode": "695022",
+      "id": 9
     }
   ],
   "shops": [
@@ -207,6 +216,20 @@
       "delivery_boy_assigned": "Steve Palmer",
       "delivery_boy_id": 2,
       "id": 4
+    },
+    {
+      "shop_id": "5",
+      "delivery_to": {
+        "customer_name": "thr",
+        "address": "ttye",
+        "phone": "9999999999",
+        "pincode": "777777"
+      },
+      "delivery_from": "pepperfryw2w22",
+      "status": "awaiting delivery boy confirmation",
+      "delivery_boy_assigned": "Sam Smith",
+      "delivery_boy_id": 6,
+      "id": 5
     }
   ]
 }

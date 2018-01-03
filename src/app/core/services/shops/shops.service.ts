@@ -9,8 +9,9 @@ export class ShopsService {
 
   constructor(private http: HttpClient) { }
 
-  public getAllShops(): Observable<any> { // Update structutre
-    return this.http.get(CONFIG.urls.getShops)
+  public getAllShops(): Observable<any> {
+    const url = CONFIG.urls.getShops + '?_sort=id&_order=desc';
+    return this.http.get(url)
       .map((res: any) => {
         return res;
       });

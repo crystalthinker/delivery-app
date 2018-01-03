@@ -8,7 +8,8 @@ import {DeliveryBoysModule} from '../delivery-boys/delivery-boys.module';
 import {DashboardModule} from '../dashboard/dashboard.module';
 import {DeliveryManagementModule} from '../delivery-management/delivery-management.module';
 import {ShopManagementModule} from '../shop-management/shop-management.module';
-import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import {SharedModule} from '../shared/shared.module';
+
 
 @NgModule({
   imports: [
@@ -17,8 +18,9 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     DeliveryBoysModule,
     DeliveryManagementModule,
     ShopManagementModule,
-    DashboardModule
+    DashboardModule,
+    SharedModule
   ],
-  declarations: [HomeComponent, BreadcrumbComponent],
+  declarations: [HomeComponent],
 })
 export class HomeModule { }
