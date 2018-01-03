@@ -69,7 +69,6 @@ export class DeliveryCreateComponent implements OnInit {
     // this.selectedShop = shop;
   }
   saveNewDelivery() {
-        console.log(this.deliveryForm.value);
         this.assignNewDeliveryBoy(this.deliveryForm.value);
   }
   assignNewDeliveryBoy(deliveryInfo: any) {
@@ -77,7 +76,6 @@ export class DeliveryCreateComponent implements OnInit {
      deliveryInfo.delivery_from = this.selectedShop.name;
     // TODO add logic. Temp check only available delivery boy and pincode check
     this.deliveryBoyservice.getFilteredDeliveryBoysList('available', this.selectedShop.pincode).subscribe(boys => {
-       console.log(boys);
        if ( boys.length > 0) {
          deliveryInfo.status = 'awaiting delivery boy confirmation';
          deliveryInfo.delivery_boy_assigned =  boys[0].name;

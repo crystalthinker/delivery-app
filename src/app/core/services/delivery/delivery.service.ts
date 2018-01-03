@@ -15,7 +15,7 @@ export class DeliveryService {
   }
 
   public addNewDelivery(deliverInfo): Observable<any> { // Update structutre
-    return this.http.post(CONFIG.urls.getDeliveryBoys, deliverInfo)
+    return this.http.post(CONFIG.urls.getDelivery, deliverInfo)
       .map((res: any) => {
         return res;
       });
