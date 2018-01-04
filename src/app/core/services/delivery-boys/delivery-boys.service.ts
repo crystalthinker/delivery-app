@@ -54,4 +54,12 @@ export class DeliveryBoysService {
                     return res;
                 });
   }
+
+  public getBoyAssignments(id): Observable<any> {
+      const url = `${CONFIG.urls.getDelivery}?delivery_boy_id=${id}`;
+      return this.http.get(url)
+        .map((res: any) => {
+          return res;
+        });
+  }
 }

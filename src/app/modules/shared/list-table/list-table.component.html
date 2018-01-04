@@ -9,7 +9,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let list of listData;">
+      <tr *ngFor="let list of listData;" (click)="onSelect($event, list.id)">
         <td *ngFor="let listkey of listKeys;" scope="col">
           {{list[listkey]}}
         </td>

@@ -166,7 +166,7 @@
       "id": 1,
       "delivery_from": "vridhi",
       "shop_id": "1",
-      "delivery_boy_id": "1",
+      "delivery_boy_id": 1,
       "delivery_to": {
         "customer_name": "",
         "address": "",
@@ -174,20 +174,20 @@
         "pincode": ""
       },
       "delivery_boy_assigned": "Sebastin Eschweiler",
-      "status": "Delivered"
+      "status": "Awaiting Confirmation"
     },
     {
       "id": 2,
       "delivery_from": "vridhi",
       "shop_id": "1",
-      "delivery_boy_id": "3",
+      "delivery_boy_id": 1,
       "delivery_to": {
         "customer_name": "",
         "address": "",
         "phone": "",
         "pincode": ""
       },
-      "delivery_boy_assigned": "Ann Smith",
+      "delivery_boy_assigned": "Sebastin Eschweiler",
       "status": "Delivered"
     },
     {

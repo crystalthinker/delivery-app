@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DeliveryBoysService} from '../../core/services/delivery-boys/delivery-boys.service';
 import {LoginService} from '../../core/services/login/login.service';
-import {NavigationEnd, NavigationStart, Router} from '@angular/router';
+import {NavigationEnd, Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
     router.events
       .subscribe((evt) => {
         if (evt instanceof NavigationEnd) {
-          console.log(evt.url);
           if (evt.url === '/') {
             this.checkUserRole();
           }
@@ -30,7 +29,7 @@ export class HomeComponent implements OnInit {
     const user = this.loginService.currentUser();
     if (user.role === 'admin') {
       this.router.navigate(['/dashboard']);
-    } else if (user.role === 'delivery-boys') {
+    } else if (user.role === 'delivery_boy') {
       this.router.navigate(['/deliveryboy-dashboard']);
     }
   }
