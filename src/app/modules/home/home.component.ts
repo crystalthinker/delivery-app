@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DeliveryBoysService} from '../../core/services/delivery-boys/delivery-boys.service';
 import {LoginService} from '../../core/services/login/login.service';
-import {Router} from '@angular/router';
+import {NavigationEnd, NavigationStart, Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,18 +10,28 @@ import {Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private loginService:LoginService, private router: Router) { }
+  constructor(private loginService: LoginService, private router: Router) {
+    // .filter((evt) => evt instanceof NavigationStart || evt instanceof NavigationEnd)
+    router.events
+      .subscribe((evt) => {
+        if (evt instanceof NavigationEnd) {
+          console.log(evt.url);
+          if (evt.url === '/') {
+            this.checkUserRole();
+          }
+        }
+      });
+  }
 
   ngOnInit() {
-      this.checkUserRole();
   }
 
   public checkUserRole() {
-     let user = this.loginService.currentUser();
-     if(user.role == 'admin') {
-         this.router.navigate(['/dashboard']);
-     } else if(user.role == 'delivery-boys') {
-         this.router.navigate(['/deliveryboy-dashboard']);
-     }
+    const user = this.loginService.currentUser();
+    if (user.role === 'admin') {
+      this.router.navigate(['/dashboard']);
+    } else if (user.role === 'delivery-boys') {
+      this.router.navigate(['/deliveryboy-dashboard']);
+    }
   }
 }
