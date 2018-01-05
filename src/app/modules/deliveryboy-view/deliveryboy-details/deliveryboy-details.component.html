@@ -1,3 +1,42 @@
-<p>
-  deliveryboy-details works!
-</p>
+<div class="row">
+    <div class="col-12">
+        <button  (click)="goBack()" class="btn btn-info right">Go Back</button>
+        <br />
+        <br />
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Customer Details</h5>
+                <p class="card-text">Name: {{name}}</p>
+                <p class="card-text">Phone: {{phone}}</p>
+                <p class="card-text">Address: {{address}}</p>
+                <p class="card-text">Pincode: {{pincode}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Shop Details</h5>
+                <p class="card-text">Name: {{shopName}}</p>
+                <p class="card-text">Phone: {{shopPhone}}</p>
+                <p class="card-text">Address: {{shopAddress}}</p>
+                <p class="card-text">Pincode: {{shopPincode}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Delivery Status</h5>
+                <button *ngIf="statusAwaiting" (click)="acceptJob()" class="btn btn-primary link">Accept</button>
+                <button *ngIf="statusAwaiting" (click)="denyJob()" class="btn btn-primary link">Deny</button>
+                <button *ngIf="statusPickUp" (click)="confirmPickUp()" class="btn btn-primary link">Confirm Pickup</button>
+                <button *ngIf="statusInProgress" (click)="confrimDelivered()" class="btn btn-primary link">Confrim Delivered</button>
+                <button *ngIf="statusCompleted"  class="btn btn-success">Delivery Completed</button>
+                <button *ngIf="statusPending"  class="btn btn-success">Pending</button>
+            </div>
+        </div>
+    </div>
+</div>
