@@ -5,7 +5,7 @@
       "name": "Sebastian Eschweiler",
       "email": "sebastian@abcdelivery.com",
       "phone": "9557735467",
-      "status": "engaged",
+      "status": "unavailable",
       "address": "test address",
       "pincode": "695022"
     },
@@ -50,7 +50,7 @@
       "name": "Sam Smith",
       "email": "sam@abcdelivery.com",
       "phone": "9587735469",
-      "status": "engaged",
+      "status": "available",
       "address": "test address",
       "pincode": "695301"
     },
@@ -158,7 +158,57 @@
       "id": 3,
       "username": "abhi",
       "password": "abhi",
-      "role": "delivery_boy"
+      "role": "delivery_boy",
+      "delivery_boy_Id": 2
+    },
+    {
+      "id": 4,
+      "username": "test2",
+      "password": "test2",
+      "role": "delivery_boy",
+      "delivery_boy_Id": 3
+    },
+    {
+      "id": 5,
+      "username": "test3",
+      "password": "test3",
+      "role": "delivery_boy",
+      "delivery_boy_Id": 4
+    },
+    {
+      "id": 6,
+      "username": "test3",
+      "password": "test3",
+      "role": "delivery_boy",
+      "delivery_boy_Id": 5
+    },
+    {
+      "id": 7,
+      "username": "test4",
+      "password": "test4",
+      "role": "delivery_boy",
+      "delivery_boy_Id": 6
+    },
+    {
+      "id": 8,
+      "username": "test5",
+      "password": "test5",
+      "role": "delivery_boy",
+      "delivery_boy_Id": 7
+    },
+    {
+      "id": 9,
+      "username": "test6",
+      "password": "test6",
+      "role": "delivery_boy",
+      "delivery_boy_Id": 8
+    },
+    {
+      "id": 10,
+      "username": "test7",
+      "password": "test7",
+      "role": "delivery_boy",
+      "delivery_boy_Id": 9
     }
   ],
   "delivery": [
@@ -174,7 +224,7 @@
         "pincode": "695122"
       },
       "delivery_boy_assigned": "Sebastin Eschweiler",
-      "status": "Awaiting Confirmation"
+      "status": "pending"
     },
     {
       "id": 2,
@@ -213,7 +263,7 @@
         "pincode": "676767"
       },
       "delivery_from": "pepperfry",
-      "status": "awaiting delivery boy confirmation",
+      "status": "Awaiting Confirmation",
       "delivery_boy_assigned": "Steve Palmer",
       "delivery_boy_id": 2,
       "id": 4
@@ -227,10 +277,38 @@
         "pincode": "777777"
       },
       "delivery_from": "pepperfryw2w22",
-      "status": "awaiting delivery boy confirmation",
+      "status": "Awaiting Confirmation",
       "delivery_boy_assigned": "Sam Smith",
       "delivery_boy_id": 6,
       "id": 5
+    },
+    {
+      "shop_id": "2",
+      "delivery_to": {
+        "customer_name": "Ram Kumar",
+        "address": "Technopark, Phase3.",
+        "phone": "78954561454",
+        "pincode": "695874"
+      },
+      "delivery_from": "pepperfry",
+      "status": "pending",
+      "delivery_boy_assigned": "",
+      "delivery_boy_id": "",
+      "id": 6
+    },
+    {
+      "shop_id": "2",
+      "delivery_to": {
+        "customer_name": "Ram Manu",
+        "address": "Thycad, TVM",
+        "phone": "7845145221",
+        "pincode": "695124"
+      },
+      "delivery_from": "pepperfry",
+      "status": "pending",
+      "delivery_boy_assigned": "",
+      "delivery_boy_id": "",
+      "id": 7
     }
   ]
 }

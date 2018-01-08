@@ -13,6 +13,9 @@ export class DeliveryboyProfileComponent implements OnInit {
   public phone: number;
   public status: string;
   public pincode: number;
+  public deliveryBoyData: any;
+  public available: boolean = true;
+  public unavailable: boolean = false;
 
   constructor(private service:DeliveryBoysService) { }
 
@@ -29,11 +32,41 @@ export class DeliveryboyProfileComponent implements OnInit {
           this.phone = data.phone;
           this.status = data.status;
           this.pincode = data.pincode;
+          this.deliveryBoyData = data;
+          if(data.status == 'unavailable') {
+              this.unavailable = true;
+              this.available = false;
+          }
       });
   }
 
   public getDeliveryBoyId() {
       this.id = this.service.getId();
+  }
+
+  public onAvailable() {
+      this.available = true;
+      this.unavailable = false;
+      this.deliveryBoyData.status = 'available';
+      this.service.updateDeliveryBoyStatus(this.id, this.deliveryBoyData)
+          .subscribe((result) => {
+              if(result) {
+                  this.getProfileData();
+              }
+          })
+
+  }
+
+  public onUnAvailable() {
+      this.unavailable = true;
+      this.available = false;
+      this.deliveryBoyData.status = 'unavailable';
+      this.service.updateDeliveryBoyStatus(this.id, this.deliveryBoyData)
+          .subscribe((result) => {
+              if(result) {
+                  this.getProfileData();
+              }
+          })
   }
 
 }

@@ -147,7 +147,7 @@ export class DeliveryboyDetailsComponent implements OnInit {
   public confrimDelivered() {
       //delivery Confirmation
       this.statusInProgress = false;
-      this.statusCompleted =true;
+      this.statusCompleted = true;
       this.deliveryData.status = 'Delivered';
       this.deliveryService.changeDeliveryStatus(this.deliveryId, this.deliveryData)
           .subscribe((result) => {
