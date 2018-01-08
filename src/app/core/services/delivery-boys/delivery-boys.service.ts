@@ -31,6 +31,7 @@ export class DeliveryBoysService {
         return res;
       });
   }
+
   public updateDeliveryBoyStatus(id, deliverBoyInfo): Observable<any> {
     // Update structutre
     const url = CONFIG.urls.getDeliveryBoys + '/' + id;

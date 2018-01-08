@@ -5,7 +5,7 @@
       "name": "Sebastian Eschweiler",
       "email": "sebastian@abcdelivery.com",
       "phone": "9557735467",
-      "status": "available",
+      "status": "engaged",
       "address": "test address",
       "pincode": "695022"
     },
@@ -165,13 +165,13 @@
     {
       "id": 1,
       "delivery_from": "vridhi",
-      "shop_id": "1",
+      "shop_id": 1,
       "delivery_boy_id": 1,
       "delivery_to": {
-        "customer_name": "",
-        "address": "",
-        "phone": "",
-        "pincode": ""
+        "customer_name": "Ram Kumar",
+        "address": "Technopark",
+        "phone": "989595145",
+        "pincode": "695122"
       },
       "delivery_boy_assigned": "Sebastin Eschweiler",
       "status": "Awaiting Confirmation"
@@ -179,7 +179,7 @@
     {
       "id": 2,
       "delivery_from": "vridhi",
-      "shop_id": "1",
+      "shop_id": 1,
       "delivery_boy_id": 1,
       "delivery_to": {
         "customer_name": "",
@@ -193,7 +193,7 @@
     {
       "id": 3,
       "delivery_from": "test_shop",
-      "shop_id": "3",
+      "shop_id": 3,
       "delivery_boy_id": "5",
       "delivery_to": {
         "customer_name": "",
@@ -205,7 +205,7 @@
       "status": "Delivered"
     },
     {
-      "shop_id": "2",
+      "shop_id": 2,
       "delivery_to": {
         "customer_name": "test",
         "address": "test address ",
@@ -219,7 +219,7 @@
       "id": 4
     },
     {
-      "shop_id": "5",
+      "shop_id": 5,
       "delivery_to": {
         "customer_name": "thr",
         "address": "ttye",

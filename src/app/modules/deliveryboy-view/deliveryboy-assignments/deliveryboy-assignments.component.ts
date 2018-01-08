@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {DeliveryBoysService} from '../../../core/services/delivery-boys/delivery-boys.service'
 
 @Component({
@@ -17,7 +18,7 @@ export class DeliveryboyAssignmentsComponent implements OnInit {
       'delivery_from',
       'status'
   ];
-  constructor(private service:DeliveryBoysService) { }
+  constructor(private service:DeliveryBoysService, private router:Router) { }
 
   ngOnInit() {
       this.getDeliveryBoyId();
@@ -36,7 +37,7 @@ export class DeliveryboyAssignmentsComponent implements OnInit {
   }
 
   public onClick(id: any) {
-      console.log(id);
+      this.router.navigate([`/assignment-details/${id}`]);
   }
 
 }
