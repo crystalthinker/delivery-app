@@ -52,6 +52,7 @@ export class DeliveryCreateComponent implements OnInit {
       })
     });
   }
+
   onShopChange(shopId) {
     if ( shopId ) {
       // TODO fetch hotel name and other details with id
@@ -70,24 +71,24 @@ export class DeliveryCreateComponent implements OnInit {
     // TODO add logic. Temp check only available delivery boy and pincode check
     this.deliveryBoyservice.getFilteredDeliveryBoysList('available', this.selectedShop.pincode).subscribe(boys => {
        if ( boys.length > 0) {
-         deliveryInfo.status = 'awaiting delivery boy confirmation';
+         deliveryInfo.status = 'Awaiting Confirmation';
          deliveryInfo.delivery_boy_assigned =  boys[0].name;
          deliveryInfo.delivery_boy_id = boys[0].id;
          let boyInfoUpdate = boys[0];
          boyInfoUpdate.status = 'engaged';
          this.deliveryBoyservice.updateDeliveryBoyStatus(boys[0].id, boyInfoUpdate).subscribe(result=>{
            this.service.addNewDelivery(deliveryInfo).subscribe(res => {
-             this.router.navigate(['/delivery/list']);
+             this.router.navigate(['/delivery']);
            });
          });
          // change status of boy to engaged, awaiting delivery boy confirmation status of delivery
-       }else {
+       } else {
          // status of delivery to pending
          deliveryInfo.status = 'pending';
          deliveryInfo.delivery_boy_assigned = '';
          deliveryInfo.delivery_boy_id = '';
          this.service.addNewDelivery(deliveryInfo).subscribe(res => {
-           this.router.navigate(['/delivery/list']);
+           this.router.navigate(['/delivery']);
          });
        }
     });

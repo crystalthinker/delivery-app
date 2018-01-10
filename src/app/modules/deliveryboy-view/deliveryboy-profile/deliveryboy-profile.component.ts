@@ -33,7 +33,7 @@ export class DeliveryboyProfileComponent implements OnInit {
           this.status = data.status;
           this.pincode = data.pincode;
           this.deliveryBoyData = data;
-          if(data.status == 'unavailable') {
+          if(data.status === 'unavailable') {
               this.unavailable = true;
               this.available = false;
           }
@@ -54,7 +54,6 @@ export class DeliveryboyProfileComponent implements OnInit {
                   this.getProfileData();
               }
           })
-
   }
 
   public onUnAvailable() {

@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class AppComponent implements OnInit, OnDestroy {
   public title = 'ABC Delivery';
-  public checkLogin: boolean = false;
+  public loginActive: boolean = false;
   public subscription: Subscription;
 
   constructor(private loginService: LoginService, private router: Router) {}
@@ -24,20 +24,18 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   public isUserLoggedIn() {
-      this.subscription = this.loginService.checkLogin
+      this.subscription = this.loginService.loginData
           .subscribe(role => {
-              if(role == 'admin' || role == 'delivery_boy') {
-                  this.checkLogin = true;
+              if(role === 'admin' || role === 'delivery_boy') {
+                  this.loginActive = true;
               }
           });
-      if(this.loginService.isLoggedIn()) {
-          this.checkLogin = true;
-      }
+      this.loginService.isLoggedIn() ? this.loginActive = true : this.loginActive = false;
   }
 
   public logOut() {
       this.loginService.logOutUser();
-      this.checkLogin = false;
+      this.loginActive = false;
       this.router.navigate(['login']);
   }
 

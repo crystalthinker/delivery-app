@@ -7,10 +7,6 @@ export class RoleGuard implements CanActivate {
   constructor(private service: LoginService, private router: Router) {};
 
   canActivate() {
-      if(this.service.checkUser()) {
-          return true;
-      } else {
-          this.router.navigate(['/login']);
-      }
+      return this.service.isAdmin() ? true :  this.router.navigate(['/login']);
   }
 }

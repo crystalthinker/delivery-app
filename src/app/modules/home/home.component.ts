@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   }
 
   public checkUserRole() {
-    const user = this.loginService.currentUser();
+    const user = this.loginService.getCurrentUser();
     if (user.role === 'admin') {
       this.router.navigate(['/dashboard']);
     } else if (user.role === 'delivery_boy') {

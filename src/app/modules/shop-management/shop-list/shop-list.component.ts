@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 import {ShopsService} from '../../../core/services/shops/shops.service';
 
 @Component({
@@ -15,11 +16,18 @@ export class ShopListComponent implements OnInit {
     'Address',
     'Pincode'];
   listKeys: any = ['name', 'type', 'phone', 'address', 'pincode'];
-  constructor(private service: ShopsService) { }
+  constructor(private service: ShopsService,
+              private router:Router
+          ) { }
 
   ngOnInit() {
     this.service.getAllShops().subscribe(shops => {
       this.shops = shops;
     });
   }
+
+  public onClick(id: any) {
+      this.router.navigate([`/shops/detail/${id}`]);
+  }
+
 }

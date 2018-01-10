@@ -30,4 +30,12 @@ export class ShopsService {
         return res;
       });
   }
+
+  public updateShop(id, updateStatus): Observable<any> {
+      const url = CONFIG.urls.getShops + '/' + id;
+      return this.http.put(url, updateStatus)
+        .map((res: any) => {
+          return res;
+        });
+  }
 }

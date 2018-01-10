@@ -20,6 +20,9 @@ const routes: Routes = [{
       }},
     { path: 'detail/:id',
       component: DeliveryEditComponent,
+      data: {
+        breadcrumb: 'Edit'
+      }
     }
   ]
 }];

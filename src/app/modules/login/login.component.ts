@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       this.service.login(this.loginFormGroup.value.username, this.loginFormGroup.value.password)
         .subscribe(data => {
             if(data) {
-               this.service.emitCheckLoggedIn(data.role);
+               this.service.emitLoggedInRole(data.role);
                if(data.role === 'delivery_boy') {
                    this.router.navigate(['/deliveryboy-dashboard']);
                } else if(data.role === 'admin') {
