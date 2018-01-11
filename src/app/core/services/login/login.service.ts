@@ -8,12 +8,18 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class LoginService {
   private itemValue = new BehaviorSubject<any>(0);
-  public checkLogin = this.itemValue.asObservable();
+  public loginData = this.itemValue.asObservable();
+  public currentUser: any;
 
   constructor(private http: HttpClient) { }
 
-  public emitCheckLoggedIn(value) {
+  public emitLoggedInRole(value) {
       this.itemValue.next(value);
+  }
+
+  public getCurrentUser() {
+      this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      return this.currentUser;
   }
 
   public login(username: string, password: string) {
@@ -28,40 +34,26 @@ export class LoginService {
   }
 
   public isLoggedIn() {
-      let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-      if(currentUser) {
-          return true;
-      } else {
-          return false;
-      }
+      this.getCurrentUser();
+      if(this.currentUser)
+        return this.currentUser.role.length > 0 ? true : false;
   }
 
-  public checkUser() {
-      let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-      if(currentUser.role == 'admin') {
-          return true;
-      } else {
-          return false;
-      }
+  public isAdmin() {
+      this.getCurrentUser();
+      if(this.currentUser)
+        return this.currentUser.role === 'admin' ? true : false;
   }
 
-  public deliveryBoyRole() {
-      let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-      if(currentUser.role == 'delivery_boy') {
-          return true;
-      } else {
-          return false;
-      }
+  public isDeliveryBoy() {
+      this.getCurrentUser();
+      if(this.currentUser)
+        return this.currentUser.role === 'delivery_boy' ? true : false;
   }
 
   public logOutUser() {
-      if(localStorage.getItem('currentUser') !== null) {
-          localStorage.removeItem('currentUser');
-      }
+      if(localStorage.getItem('currentUser') !== null)
+        localStorage.removeItem('currentUser');
   }
 
-  public currentUser() {
-      let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-      return currentUser;
-  }
 }

@@ -4,7 +4,7 @@
         <h1>{{title}}</h1>
       </div>
     </div>
-    <div class="logout-wrapper" *ngIf="checkLogin">
+    <div class="logout-wrapper" *ngIf="loginActive">
         <p (click)="logOut()">LogOut</p>
     </div>
 </div>

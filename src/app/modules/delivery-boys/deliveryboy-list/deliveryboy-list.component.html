@@ -3,4 +3,4 @@
     <button type="button" class="btn btn-primary float-right" [routerLink]="['/delivery-boys/create']">Add a Delivery Boy</button>
   </div>
 </div>
-<app-list-table [headerData]="headerData" [listData]="deliveryBoys" [listKeys]="listKeys"></app-list-table>
+<app-list-table (onRowSelect)="onClick($event)" [headerData]="headerData" [listData]="deliveryBoys" [listKeys]="listKeys"></app-list-table>

@@ -23,4 +23,8 @@ export class DeliveryboyListComponent implements OnInit {
       this.deliveryBoys = deliveryBoys;
     });
   }
+
+  public onClick(id: any) {
+      this.router.navigate([`/delivery-boys/detail/${id}`]);
+  }
 }

@@ -22,6 +22,9 @@ const routes: Routes = [{
       },
     },
     {path: 'detail/:id', component: DeliveryboyEditComponent,
+    data: {
+      breadcrumb: 'Detail'
+    },
     }
   ]
 }];

@@ -22,7 +22,11 @@ const routes: Routes = [{
         breadcrumb: 'Create'
       }
     },
-    {path: 'detail/:id', component: ShopEditComponent}
+    {path: 'detail/:id', component: ShopEditComponent,
+     data: {
+      breadcrumb: 'Detail'
+     }
+    }
   ]
 }];
 

@@ -7,10 +7,6 @@ export class DeliveryboyRoleGuard implements CanActivate {
   constructor(private service: LoginService, private router: Router) {};
 
   canActivate() {
-      if(this.service.deliveryBoyRole()) {
-          return true;
-      } else {
-          this.router.navigate(['/login']);
-      }
+      return this.service.isDeliveryBoy() ? true : this.router.navigate(['/login']);
   }
 }

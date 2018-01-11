@@ -22,7 +22,7 @@ const routes: Routes = [{
       canActivate: [RoleGuard],
       data: {
         breadcrumb: 'Delivery Boys'
-    }
+      }
       },
     {
       path: 'dashboard',

@@ -120,7 +120,6 @@ export class DeliveryboyDetailsComponent implements OnInit {
       this.deliveryService.changeDeliveryStatus(this.deliveryId, this.deliveryData)
           .subscribe((result) => {
               if(result) {
-                  console.log(result);
               }
           });
       this.deliveryBoysService.updateDeliveryBoyStatus(this.deliveryBoyId, this.deliveryBoyData)
