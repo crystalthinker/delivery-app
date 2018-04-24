@@ -9,25 +9,27 @@ import {ShopsService} from '../../../core/services/shops/shops.service';
 })
 export class ShopListComponent implements OnInit {
 
-  shops: any = [];
-  headerData: any = ['Name',
-    'Type',
-    'Phone',
-    'Address',
-    'Pincode'];
-  listKeys: any = ['name', 'type', 'phone', 'address', 'pincode'];
+  public shops: any = [];
+  public tableColumn = [
+      {field: 'name', header: 'Name'},
+      {field: 'type', header: 'Type'},
+      {field: 'phone', header: 'Phone'},
+      {field: 'address', header: 'Address'},
+      {field: 'pincode', header: 'Pincode'}
+  ];
+
   constructor(private service: ShopsService,
               private router:Router
           ) { }
 
   ngOnInit() {
-    this.service.getAllShops().subscribe(shops => {
+    this.service.getAllShops().then(shops => {
       this.shops = shops;
     });
   }
 
-  public onClick(id: any) {
-      this.router.navigate([`/shops/detail/${id}`]);
+  public onRowSelect(event) {
+      this.router.navigate([`/shops/detail/${event.data.id}`]);
   }
 
 }

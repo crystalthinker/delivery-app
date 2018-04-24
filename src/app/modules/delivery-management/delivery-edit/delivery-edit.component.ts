@@ -31,7 +31,7 @@ export class DeliveryEditComponent implements OnInit {
 
   ngOnInit() {
       this.updateForm();
-      this.shopService.getAllShops().subscribe(shops => {
+      this.shopService.getAllShops().then(shops => {
         this.shops = shops;
       });
       this.getDeliveryId();

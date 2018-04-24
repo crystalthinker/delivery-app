@@ -3,12 +3,29 @@
   color: #ffffff;
 }
 
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
 .logout-wrapper {
     text-align: right;
 }
 
 .logout-wrapper p {
     color: #ffffff;
-    margin-right: 191px;
+    margin-top: 50px;
     cursor: pointer;
+}
+
+.logo {
+    height: 95px;
+    width: 167px;
+}
+
+.logo-img {
+    width: 100%;
+    object-fit: cover;
+    margin-left: 15px;
 }

@@ -4,7 +4,7 @@
   "name": "Angular PWA ",
   "scope": "/",
   "display": "fullscreen",
-  "start_url": "http://127.0.0.1:8080/",
+  "start_url": "https://delivery-app-001.firebaseapp.com/",
   "short_name": "Angular PWA",
   "theme_color": "transparent",
   "description": "Sample PWA App",

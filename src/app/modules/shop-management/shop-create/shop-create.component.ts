@@ -27,7 +27,7 @@ export class ShopCreateComponent implements OnInit {
   }
   saveNewShop() {
     this.service.addNewShop(this.shopForm.value).subscribe(res => {
-      this.router.navigate(['/shops/list']);
+      this.router.navigate(['/shops']);
     });
   }
 }

@@ -14,7 +14,12 @@ const routes: Routes = [{
               breadcrumb: 'Delivery Boy'
             },
         },
-        {path: 'assignment-details/:id', component: DeliveryboyDetailsComponent}
+        {
+            path: 'deliveryboy-dashboard/details/:id',
+            data: {
+              breadcrumb: 'Assignment Details'
+            },
+            component: DeliveryboyDetailsComponent}
     ]
 }];
 

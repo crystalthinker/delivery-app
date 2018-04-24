@@ -10,11 +10,39 @@ export class LoginService {
   private itemValue = new BehaviorSubject<any>(0);
   public loginData = this.itemValue.asObservable();
   public currentUser: any;
+  public existingLockedUser: any;
 
   constructor(private http: HttpClient) { }
 
   public emitLoggedInRole(value) {
       this.itemValue.next(value);
+  }
+
+  public isLocked() {
+      let user = this.getCurrentUser();
+      return this.checkCurrentUser().subscribe(item => {
+          this.existingLockedUser = item.currentUser;
+          return user.username === this.existingLockedUser ? true : false;
+      });
+
+  }
+
+  public checkCurrentUser(): Observable<any> {
+      let id = 1;
+      let url = CONFIG.urls.lockedUser + '/' + id;
+      return this.http.get(url)
+      .map((res:any) => {
+          return res;
+      })
+  }
+
+  public updateCurrentUser(value): Observable<any> {
+      let id = 1;
+      let url = CONFIG.urls.lockedUser + '/' + id;
+      return this.http.put(url, value)
+      .map((user:any) => {
+          return user;
+      })
   }
 
   public getCurrentUser() {

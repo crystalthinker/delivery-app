@@ -5,7 +5,7 @@
       "name": "Sebastian Eschweiler",
       "email": "sebastian@abcdelivery.com",
       "phone": "9557735467",
-      "status": "engaged",
+      "status": "available",
       "address": "test address",
       "pincode": "695022"
     },
@@ -80,6 +80,24 @@
       "address": "hjjtjuyfsfdsfsdf",
       "pincode": "695022",
       "id": 9
+    },
+    {
+      "name": "fdsfdfs",
+      "email": "fdsdf@ff.com",
+      "phone": "4534543",
+      "status": "inactive",
+      "address": "fsdfv",
+      "pincode": "543345",
+      "id": 10
+    },
+    {
+      "name": "fdsf",
+      "email": "fdsf@edf.com",
+      "phone": "44343",
+      "status": "inactive",
+      "address": "fbdg",
+      "pincode": "553",
+      "id": 11
     }
   ],
   "shops": [
@@ -281,6 +299,12 @@
       "delivery_boy_assigned": "Sam Smith",
       "delivery_boy_id": 6,
       "id": 5
+    }
+  ],
+  "user_locked": [
+    {
+      "currentUser": "abc_admin",
+      "id": 1
     }
   ]
 }

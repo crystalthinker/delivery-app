@@ -1,0 +1,17 @@
+{
+  "routing":{
+    "routes":{
+      "/": {
+        "match": true
+      },
+      "/dashboard":{
+        "match": "prefix"
+      },
+      "/delivery-boys":{
+        "match": "prefix"
+      }
+    }
+  },
+  "static:{
+  }
+ }

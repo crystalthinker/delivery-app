@@ -18,6 +18,11 @@ export class DeliveryboyAssignmentsComponent implements OnInit {
       'delivery_from',
       'status'
   ];
+  public tableColumn = [
+      {field: 'delivery_from', header: 'Delivery From'},
+      {field: 'status', header: 'Status'}
+  ];
+
   constructor(private service:DeliveryBoysService, private router:Router) { }
 
   ngOnInit() {
@@ -36,8 +41,12 @@ export class DeliveryboyAssignmentsComponent implements OnInit {
       this.id = this.service.getId();
   }
 
-  public onClick(id: any) {
-      this.router.navigate([`/assignment-details/${id}`]);
+  public onRowSelect(event) {
+      this.router.navigate([`/deliveryboy-dashboard/details/${this.id}`]);
   }
+
+  // public onClick(id: any) {
+  //     this.router.navigate([`/assignment-details/${id}`]);
+  // }
 
 }

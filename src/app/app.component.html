@@ -1,11 +1,16 @@
 <div class="container-fluid header">
+    <div class="top-header container">
     <div class="row header-text">
+        <div class="logo">
+            <img class="logo-img" src="assets/images/logo.jpg" />
+        </div>
       <div class="col">
-        <h1>{{title}}</h1>
+        <!-- <h1>{{title}}</h1> -->
       </div>
     </div>
     <div class="logout-wrapper" *ngIf="loginActive">
         <p (click)="logOut()">LogOut</p>
     </div>
+</div>
 </div>
 <router-outlet></router-outlet>
