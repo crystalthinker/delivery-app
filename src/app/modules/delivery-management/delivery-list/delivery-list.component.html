@@ -3,23 +3,4 @@
     <button type="button" class="btn btn-primary float-right" [routerLink]="['/delivery/create']">Add new Delivery</button>
   </div>
 </div>
-<div class="row">
-  <div class="col-12">
-    <table class="table table-secondary table-bordered table-hover">
-      <thead class="thead-dark">
-      <tr>
-        <th scope="col">Delivery from</th>
-        <th scope="col">Delivery Boy Assigned</th>
-        <th scope="col">Status</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let delivery of deliveries;">
-        <td>{{delivery.delivery_from}}</td>
-        <td>{{delivery.delivery_boy_assigned}}</td>
-        <td>{{delivery.status}}</td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+<app-list-table (onRowSelect)="onClick($event)" [headerData]="headerData" [listData]="deliveries" [listKeys]="listKeys"></app-list-table>

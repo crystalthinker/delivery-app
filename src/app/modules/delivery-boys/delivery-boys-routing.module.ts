@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import {DeliveryBoysComponent} from './delivery-boys.component';
 import {DeliveryboyListComponent} from './deliveryboy-list/deliveryboy-list.component';
 import {DeliveryboyEditComponent} from './deliveryboy-edit/deliveryboy-edit.component';
@@ -9,10 +9,23 @@ const routes: Routes = [{
   path: '',
   component: DeliveryBoysComponent,
   children: [
-    {path: '', redirectTo: 'list', pathMatch: 'full'},
-    {path: 'list', component: DeliveryboyListComponent},
-    {path: 'create', component: DeliveryboyCreateComponent},
-    {path: ':id', component: DeliveryboyEditComponent}
+    {
+      path: '', component: DeliveryboyListComponent,
+      data: {
+        breadcrumb: 'List'
+      },
+    },
+    {
+      path: 'create', component: DeliveryboyCreateComponent,
+      data: {
+        breadcrumb: 'Create'
+      },
+    },
+    {path: 'detail/:id', component: DeliveryboyEditComponent,
+    data: {
+      breadcrumb: 'Detail'
+    },
+    }
   ]
 }];
 
@@ -20,4 +33,5 @@ const routes: Routes = [{
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DeliveryBoysRoutingModule { }
+export class DeliveryBoysRoutingModule {
+}

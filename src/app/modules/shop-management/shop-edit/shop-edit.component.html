@@ -1,3 +1,43 @@
-<p>
-  shop-edit works!
-</p>
+<div class="row delivery-header">
+  <div class="col">
+    <h4> Please fill in the Details to update shop:</h4>
+  </div>
+</div>
+<form [formGroup]="updateShopForm" novalidate>
+  <div class="row">
+    <div class="form-group col-4">
+      <label class="center-block">Name: </label>
+        <input class="form-control" formControlName="name" [(ngModel)]="name">
+        <small class="form-text error-text" *ngIf="updateShopForm.controls['name'].errors && updateShopForm.controls['name'].touched">Required Field</small>
+    </div>
+    <div class="form-group col-4">
+      <label class="center-block">Type:</label>
+        <select class="form-control" formControlName="type">
+          <option [selected]="type === 'hotel'">hotel</option>
+          <option [selected]="type === 'furniture'">furniture</option>
+          <option [selected]="type === 'stationary'">stationary</option>
+        </select>
+      <small class="form-text error-text" *ngIf="updateShopForm.controls['type'].errors && updateShopForm.controls['type'].touched">Required Field</small>
+    </div>
+    <div class="form-group col-4">
+      <label class="center-block">Phone: </label>
+        <input class="form-control" formControlName="phone" [(ngModel)]="phone">
+      <small class="form-text error-text" *ngIf="updateShopForm.controls['phone'].errors && updateShopForm.controls['phone'].touched">Required Field</small>
+    </div>
+    <div class="form-group col-4">
+      <label class="center-block">Address:</label>
+        <textarea class="form-control" formControlName="address" [(ngModel)]="address"></textarea>
+      <small class="form-text error-text" *ngIf="updateShopForm.controls['address'].errors && updateShopForm.controls['address'].touched">Required Field</small>
+    </div>
+    <div class="form-group col-4">
+      <label class="center-block">Pincode: </label>
+        <input class="form-control" formControlName="pincode" [(ngModel)]="pincode">
+      <small class="form-text error-text" *ngIf="updateShopForm.controls['pincode'].errors && updateShopForm.controls['pincode'].touched">Required Field</small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <button type="submit" class="btn btn-primary" (click)="updateShopInfo()" [disabled]="!updateShopForm.valid">Update Shop Info</button>
+    </div>
+  </div>
+</form>

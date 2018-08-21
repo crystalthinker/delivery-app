@@ -2,8 +2,7 @@
   "delivery_boys": [
     {
       "id": 1,
-      "first_name": "Sebastian",
-      "last_name": "Eschweiler",
+      "name": "Sebastian Eschweiler",
       "email": "sebastian@abcdelivery.com",
       "phone": "9557735467",
       "status": "engaged",
@@ -12,18 +11,16 @@
     },
     {
       "id": 2,
-      "first_name": "Steve",
-      "last_name": "Palmer",
+      "name": "Steve Palmer",
       "email": "steve@abcdelivery.com",
       "phone": "9557735468",
-      "status": "available",
+      "status": "engaged",
       "address": "test address",
       "pincode": "695301"
     },
     {
       "id": 3,
-      "first_name": "Ann",
-      "last_name": "Smith",
+      "name": "Ann Smith",
       "email": "ann@abcdelivery.com",
       "phone": "9557735469",
       "status": "engaged",
@@ -32,114 +29,118 @@
     },
     {
       "id": 4,
-      "first_name": "John",
-      "last_name": "Eschweiler",
+      "name": "John Eschweiler",
       "email": "john@abcdelivery.com",
       "phone": "9557735467",
-      "status": "available",
+      "status": "engaged",
       "address": "test address",
       "pincode": "695022"
     },
     {
       "id": 5,
-      "first_name": "Ram",
-      "last_name": "Palmer",
+      "name": "Ram Palmer",
       "email": "ram@abcdelivery.com",
       "phone": "9587735468",
-      "status": "available",
+      "status": "engaged",
       "address": "test address",
       "pincode": "695022"
     },
     {
       "id": 6,
-      "first_name": "Sam",
-      "last_name": "Smith",
+      "name": "Sam Smith",
       "email": "sam@abcdelivery.com",
       "phone": "9587735469",
-      "status": "available",
+      "status": "unavailable",
       "address": "test address",
       "pincode": "695301"
     },
     {
-      "first_name": "test_abhi",
-      "last_name": "dsfs",
+      "name": "test",
       "email": "test_abhi@abcdelivery.com",
       "phone": "9087654321",
-      "status": "available",
+      "status": "engaged",
       "address": "cvsffs fevfvdet fvtvdvvg",
       "pincode": "695022",
       "id": 7
     },
     {
-      "first_name": "test boy",
-      "last_name": "sdsd",
+      "name": "test boy",
       "email": "abx@abcdelivery.com",
       "phone": "9807654321",
       "status": "available",
       "address": "dsdsf",
       "pincode": "670301",
       "id": 8
+    },
+    {
+      "name": "testUser123",
+      "email": "test@abcdelivery.com",
+      "phone": "9889987654",
+      "status": "engaged",
+      "address": "hjjtjuyfsfdsfsdf",
+      "pincode": "695022",
+      "id": 9
     }
   ],
   "shops": [
     {
-      "id": 1,
-      "name": "vridhi",
+      "name": "Halais",
       "type": "hotel",
-      "address": "test address",
+      "address": "Technopark, Kazhakootam",
       "pincode": "695022",
-      "phone": "9885531678"
+      "phone": "9885531678",
+      "id": 1
     },
     {
-      "id": 2,
       "name": "pepperfry",
-      "type": "furniture",
-      "address": "test address123",
-      "pincode": "695301",
-      "phone": "9887531678"
-    },
-    {
-      "id": 3,
-      "name": "test_shop",
-      "type": "stationary",
-      "address": "test address2222",
-      "pincode": "695022",
-      "phone": "9885551678"
-    },
-    {
-      "id": 4,
-      "name": "vridhi121",
       "type": "hotel",
-      "address": "test address",
-      "pincode": "695022",
-      "phone": "9885931678"
+      "address": "Palayam, Trivandrum",
+      "pincode": "695301",
+      "phone": "9887531678",
+      "id": 2
     },
     {
-      "id": 5,
-      "name": "pepperfryw2w22",
-      "type": "furniture",
+      "name": "G-mart",
+      "type": "hotel",
+      "address": "pallipuram, Kaniyapuram",
+      "pincode": "695022",
+      "phone": "9885551678",
+      "id": 3
+    },
+    {
+      "name": "S Mart",
+      "type": "hotel",
+      "address": "Attingal, Trivandrum",
+      "pincode": "695022",
+      "phone": "9885931678",
+      "id": 4
+    },
+    {
+      "name": "G Traders",
+      "type": "hotel",
       "address": "test address123",
       "pincode": "695301",
-      "phone": "9885539678"
+      "phone": "9885539678",
+      "id": 5
     },
     {
-      "id": 6,
-      "name": "test_shop12112",
-      "type": "stationary",
+      "name": "Test Shop",
+      "type": "hotel",
       "address": "test address2222",
       "pincode": "695301",
-      "phone": "9885531698"
+      "phone": "9885531698",
+      "id": 6
     },
     {
-      "name": "Test_hotel123",
-      "type": "Hotel",
-      "address": "dfdff fvere vrfec ",
+      "name": "T Hotels",
+      "type": "hotel",
+      "address": "Kazhakootams, Trivandrum",
       "pincode": "695022",
       "phone": "9807654321",
       "id": 7
     }
   ],
-  "users":
+  "users": [
     {
       "id": 1,
       "username": "abc_admin",
@@ -150,54 +151,136 @@
       "id": 2,
       "username": "test",
       "password": "test",
-      "role": "delivery_boy"
+      "role": "delivery_boy",
+      "delivery_boy_Id": 1
     },
     {
       "id": 3,
       "username": "abhi",
       "password": "abhi",
-      "role": "delivery_boy"
+      "role": "delivery_boy",
+      "delivery_boy_Id": 2
+    },
+    {
+      "id": 4,
+      "username": "test2",
+      "password": "test2",
+      "role": "delivery_boy",
+      "delivery_boy_Id": 3
+    },
+    {
+      "id": 5,
+      "username": "test3",
+      "password": "test3",
+      "role": "delivery_boy",
+      "delivery_boy_Id": 4
+    },
+    {
+      "id": 6,
+      "username": "test3",
+      "password": "test3",
+      "role": "delivery_boy",
+      "delivery_boy_Id": 5
+    },
+    {
+      "id": 7,
+      "username": "test4",
+      "password": "test4",
+      "role": "delivery_boy",
+      "delivery_boy_Id": 6
+    },
+    {
+      "id": 8,
+      "username": "test5",
+      "password": "test5",
+      "role": "delivery_boy",
+      "delivery_boy_Id": 7
+    },
+    {
+      "id": 9,
+      "username": "test6",
+      "password": "test6",
+      "role": "delivery_boy",
+      "delivery_boy_Id": 8
+    },
+    {
+      "id": 10,
+      "username": "test7",
+      "password": "test7",
+      "role": "delivery_boy",
+      "delivery_boy_Id": 9
     }
   ],
   "delivery": [
     {
-      "id": "1",
-      "delivery_from": "vridhi",
       "shop_id": "1",
-      "delivery_boy_id": "1",
       "delivery_to": {
-        "customer_name": "",
-        "address": "",
-        "phone": ""
+        "customer_name": "Ram Kumar",
+        "address": "Technopark",
+        "phone": "989595145",
+        "pincode": "695122"
       },
-      "delivery_boy_assigned": "Sebastin Eschweiler",
-      "status": "Awaiting pickup"
+      "delivery_from": "Halais",
+      "status": "Awaiting Confirmation",
+      "delivery_boy_assigned": "Sebastian Eschweiler",
+      "delivery_boy_id": 1,
+      "id": 1
     },
     {
-      "id": "2",
-      "delivery_from": "vridhi",
       "shop_id": "1",
-      "delivery_boy_id": "3",
       "delivery_to": {
-        "customer_name": "",
-        "address": "",
-        "phone": ""
+        "customer_name": "Syams",
+        "address": "Sreekaryam, Trivandrum",
+        "phone": "7451236555",
+        "pincode": "695144"
       },
-      "delivery_boy_assigned": "Ann Smith",
-      "status": "Out for delivery"
+      "delivery_from": "Halais",
+      "status": "Awaiting Confirmation",
+      "delivery_boy_assigned": "test",
+      "delivery_boy_id": 7,
+      "id": 2
     },
     {
-      "id": "3",
+      "id": 3,
       "delivery_from": "test_shop",
-      "shop_id": "3",
+      "shop_id": 3,
       "delivery_boy_id": "5",
       "delivery_to": {
-        "customer_name": "",
-        "address": "",
-        "phone": ""
+        "customer_name": "Manu",
+        "address": "Pattom, Trivandrum",
+        "phone": "9895454755",
+        "pincode": "695211"
       },
       "delivery_boy_assigned": "Ram Palmer",
       "status": "Delivered"
+    },
+    {
+      "shop_id": 2,
+      "delivery_to": {
+        "customer_name": "test",
+        "address": "test address ",
+        "phone": "9999999992",
+        "pincode": "676767"
+      },
+      "delivery_from": "pepperfry",
+      "status": "Awaiting Confirmation",
+      "delivery_boy_assigned": "Steve Palmer",
+      "delivery_boy_id": 2,
+      "id": 4
+    },
+    {
+      "shop_id": 5,
+      "delivery_to": {
+        "customer_name": "thr",
+        "address": "ttye",
+        "phone": "9999999999",
+        "pincode": "777777"
+      },
+      "delivery_from": "pepperfryw2w22",
+      "status": "Awaiting Confirmation",
+      "delivery_boy_assigned": "Sam Smith",
+      "delivery_boy_id": 6,
+      "id": 5
     }
   ]
 }

@@ -1,3 +1,47 @@
-<p>
-  deliveryboy-edit works!
-</p>
+<div class="row delivery-header">
+ <div class="col">
+   <h4> Please update in the Details of the delivery boy:</h4>
+ </div>
+</div>
+<form [formGroup]="updateDeliveryBoyForm" novalidate>
+  <div class="row">
+   <div class="form-group col-4">
+      <label class="center-block">Name:</label>
+        <input class="form-control" formControlName="name" [(ngModel)]="name">
+     <small class="form-text error-text" *ngIf="updateDeliveryBoyForm.controls['name'].errors && updateDeliveryBoyForm.controls['name'].touched">Required Field</small>
+   </div>
+    <div class="form-group col-4">
+    <label class="center-block">Email:</label>
+      <input type="email" class="form-control" formControlName="email" [(ngModel)]="email">
+      <small class="form-text error-text" *ngIf="updateDeliveryBoyForm.controls['email'].errors && updateDeliveryBoyForm.controls['email'].touched">Required Field</small>
+    </div>
+    <div class="form-group col-4">
+    <label class="center-block">Phone:</label>
+      <input type="tel" class="form-control" formControlName="phone" [(ngModel)]="phone">
+      <small class="form-text error-text" *ngIf="updateDeliveryBoyForm.controls['phone'].errors && updateDeliveryBoyForm.controls['phone'].touched">Required Field</small>
+
+    </div>
+    <div class="form-group col-4">
+      <label class="center-block">Status:</label>
+        <select class="form-control" formControlName="status" [(ngModel)]="status">
+          <option [selected]="status === 'available'" value='available'>available</option>
+          <option [selected]="status ==='unavailable'" value='unavailable'>inactive</option>
+          <option [selected]="status === 'engaged'" value='engaged'>engaged</option>
+        </select>
+    </div>
+    <div class="form-group col-4">
+     <label class="center-block">Address:</label>
+       <textarea class="form-control" formControlName="address" rows="3" [(ngModel)]="address"></textarea>
+    </div>
+    <div class="form-group col-4">
+     <label class="center-block">Pincode:</label>
+      <input class="form-control" formControlName="pincode" [(ngModel)]="pincode">
+      <small class="form-text error-text" *ngIf="updateDeliveryBoyForm.controls['pincode'].errors && updateDeliveryBoyForm.controls['pincode'].touched">Required Field</small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <button type="submit" class="btn btn-primary" (click)="updateDeliveryBoy()" [disabled]="!updateDeliveryBoyForm.valid">Update Delivery Boy Info</button>
+    </div>
+  </div>
+</form>

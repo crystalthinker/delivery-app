@@ -1,0 +1,26 @@
+<div class="col-12">
+  <div class="card">
+    <div class="card-header">
+      <h4>Profile Information </h4>
+    </div>
+    <div class="card-body">
+      <p class="card-text">Name:   <b>{{name}}</b></p>
+      <p class="card-text">Email: <b>{{email}}</b></p>
+      <p class="card-text">Phone: <b>{{phone}}</b></p>
+      <p class="card-text">Status: <b>{{status}}</b></p>
+      <p class="card-text">Pincode: <b>{{pincode}}</b></p>
+      <div>
+          <p class="card-text">Update Status:</p>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary" [ngClass]="{'active': available}">
+              <input (click)="onAvailable()" type="radio" name="options" id="option1" autocomplete="off" checked> Active
+            </label>
+            <label class="btn btn-secondary" [ngClass]="{'active': unavailable}">
+              <input (click)="onUnAvailable()" type="radio" name="options" id="option2" autocomplete="off"> Inactive
+            </label>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -10,10 +10,20 @@ const routes: Routes = [{
   path: '',
   component: DeliveryManagementComponent,
   children: [
-    {path: '', redirectTo: 'list', pathMatch: 'full'},
-    {path: 'list', component: DeliveryListComponent},
-    {path: 'create', component: DeliveryCreateComponent},
-    {path: ':id', component: DeliveryEditComponent}
+    {path: '', component: DeliveryListComponent,
+      data: {
+        breadcrumb: 'List'
+      }},
+    {path: 'create', component: DeliveryCreateComponent,
+      data: {
+        breadcrumb: 'Create'
+      }},
+    { path: 'detail/:id',
+      component: DeliveryEditComponent,
+      data: {
+        breadcrumb: 'Edit'
+      }
+    }
   ]
 }];
 

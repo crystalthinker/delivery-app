@@ -14,6 +14,7 @@ export const CONFIG = {
   urls: {
     getDeliveryBoys: hostURL + 'delivery_boys',
     getShops: hostURL + 'shops',
-    getDelivery: hostURL + 'delivery'
+    getDelivery: hostURL + 'delivery',
+    users: hostURL + 'users'
   }
 };

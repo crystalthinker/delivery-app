@@ -1,3 +1,47 @@
-<p>
-  login works!
-</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center text-white mb-4">Login Form</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <span class="anchor" id="formLogin"></span>
+                <!-- form card login -->
+                    <div class="card rounded-0">
+                        <div class="card-header">
+                            <h3 class="mb-0">Login</h3>
+                        </div>
+                        <div class="card-body">
+                            <form [formGroup]="loginFormGroup" novalidate class="form" role="form" autocomplete="off" id="formLogin">
+                                <div class="form-group">
+                                    <label for="uname1">Username</label>
+                                    <input formControlName="username" type="text" class="form-control form-control-lg rounded-0" name="uname1" id="uname1" required="">
+                                    <div *ngIf="loginFormGroup.controls['username'].errors && !loginFormGroup.controls['username'].pristine" class="error-msg">
+                                      <div [hidden]="!loginFormGroup.controls['username'].errors.required">Username is required.</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Password</label>
+                                    <input  class="form-control form-control-lg rounded-0" type="password"  formControlName="password" required>
+                                    <div *ngIf="loginFormGroup.controls['password'].errors && !loginFormGroup.controls['password'].pristine" class="error-msg">
+                                      <div [hidden]="!loginFormGroup.controls['password'].errors.required">Password is required.</div>
+                                    </div>
+                                </div>
+                                <br/>
+                                <button (click)="loginForm()" [disabled]="loginFormGroup.invalid" type="button" class="btn btn-primary btn-lg float-right">Login</button>
+                                <div class="error-msg" *ngIf="!validLogin">
+                                    Invalid Username or Password
+                                </div>
+                            </form>
+                        </div>
+                        <!--/card-block-->
+                    </div>
+                    <!-- /form card login -->
+                </div>
+            </div>
+            <!--/row-->
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+</div>
+<!--/container-->
