@@ -1,4 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'Whitney-Light';
+  src: url('assets/fonts/Whitney-Light.eot?#iefix') format('embedded-opentype'),  url('assets/fonts/Whitney-Light.otf')  format('opentype'),
+	     url('assets/fonts/Whitney-Light.woff') format('woff'), url('assets/fonts/Whitney-Light.ttf')  format('truetype'), url('assets/fonts/Whitney-Light.svg#Whitney-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body{
+ font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+ font-size: 100%;
+ background: #FFf;
+ margin: 0;
+ padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+   margin:0;
+   font-family: 'Whitney-Light';
+   font-weight:700;
+}
+
+h1 {
+    font-size: 45px;
+}
+h4 {
+    font-size: 25px;
+}
+p, ul li {
+    font-family: 'Whitney-Light';
+    font-size: 16px;
+    line-height: 28px;
+    color: #333;
+}
+p, a {
+	margin:0;
+	font-family: 'Whitney-Light';
+    font-weight:700;
+}
+ul{
+	margin:0;
+	padding:0;
+}
+
+td {
+     word-wrap: break-word;
+}
+
+button {
+    font-family: 'Whitney-Light';
+    cursor: pointer;
+    font-weight: bold;
+}
+
 .header{
   min-height: 4rem;
   background-color: #1976d2;
@@ -9,4 +65,11 @@
 }
 .error-text{
   color: red;
+}
+
+@media(max-width: 767px) {
+    .col-4, .col-8, .col-6 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
 }

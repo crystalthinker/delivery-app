@@ -8,21 +8,23 @@ import {Router} from '@angular/router';
   styleUrls: ['./delivery-list.component.scss']
 })
 export class DeliveryListComponent implements OnInit {
-  deliveries: any = [];
-  headerData: any = ['Delivery From',
-    'Delivery Boy Assigned',
-    'Status'];
-  listKeys: any = ['delivery_from', 'delivery_boy_assigned', 'status'];
-  deliveryId: number;
+  public deliveries: any = [];
+  public deliveryId: number;
+  public tableColumn = [
+      {field: 'delivery_from', header: 'Delivery From'},
+      {field: 'delivery_boy_assigned', header: 'Delivery Boy Assigned'},
+      {field: 'status', header: 'Status'}
+  ];
+
   constructor(private service: DeliveryService, private router: Router) { }
 
   ngOnInit() {
-    this.service.getAllDelivery().subscribe(deliveries => {
+    this.service.getAllDelivery().then(deliveries => {
       this.deliveries = deliveries;
     });
   }
 
-  public onClick(id: any) {
-      this.router.navigate([`/delivery/detail/${id}`]);
+  public onRowSelect(event) {
+      this.router.navigate([`/delivery/detail/${event.data.id}`]);
   }
 }

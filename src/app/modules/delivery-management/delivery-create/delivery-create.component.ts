@@ -23,7 +23,7 @@ export class DeliveryCreateComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.shopService.getAllShops().subscribe(shops => {
+    this.shopService.getAllShops().then(shops => {
       this.shops = shops;
     });
   }

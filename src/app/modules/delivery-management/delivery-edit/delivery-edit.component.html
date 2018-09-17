@@ -23,22 +23,22 @@
     <div class="form-group col-4">
       <label class="center-block">Customer Name:</label>
       <input class="form-control" formControlName="customer_name" [(ngModel)]="customerName">
-      <small class="form-text error-text" *ngIf="deliveryEditForm.controls['delivery_to'].controls['customer_name'].errors && deliveryEditForm.controls['delivery_to'].controls['customer_name'].touched">Required Field</small>
+      <small class="form-text error-text" *ngIf="deliveryEditForm['controls'].delivery_to['controls'].customer_name.errors && deliveryEditForm['controls'].delivery_to['controls'].customer_name.touched">Required Field</small>
     </div>
     <div class="form-group col-4">
       <label class="center-block">Address:</label>
       <textarea class="form-control" formControlName="address" [(ngModel)]="address" ></textarea>
-      <small class="form-text error-text" *ngIf="deliveryEditForm.controls['delivery_to'].controls['address'].errors && deliveryEditForm.controls['delivery_to'].controls['address'].touched">Required Field</small>
+      <small class="form-text error-text" *ngIf="deliveryEditForm['controls'].delivery_to['controls'].address.errors && deliveryEditForm['controls'].delivery_to['controls'].address.touched">Required Field</small>
     </div>
     <div class="form-group col-4" >
       <label class="center-block">Phone:</label>
       <input class="form-control" formControlName="phone" [(ngModel)]="phone">
-      <small class="form-text error-text" *ngIf="deliveryEditForm.controls['delivery_to'].controls['phone'].errors && deliveryEditForm.controls['delivery_to'].controls['phone'].touched">Required Field</small>
+      <small class="form-text error-text" *ngIf="deliveryEditForm['controls'].delivery_to['controls'].phone.errors && deliveryEditForm['controls'].delivery_to['controls'].phone.touched">Required Field</small>
     </div>
      <div class="form-group col-4" >
       <label class="center-block">Pincode:</label>
       <input class="form-control" formControlName="pincode" [(ngModel)]="pincode">
-      <small class="form-text error-text" *ngIf="deliveryEditForm.controls['delivery_to'].controls['pincode'].errors && deliveryEditForm.controls['delivery_to'].controls['pincode'].touched">Required Field</small>
+      <small class="form-text error-text" *ngIf="deliveryEditForm['controls'].delivery_to['controls'].pincode.errors && deliveryEditForm['controls'].delivery_to['controls'].pincode.touched">Required Field</small>
     </div>
   </div>
   <div class="row">

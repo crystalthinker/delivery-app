@@ -9,7 +9,9 @@ import {DeliveryManagementModule} from '../delivery-management/delivery-manageme
 import {LoggedUserGuard} from '../../core/guards/logged-user.guard';
 import {DeliveryboyViewModule} from '../deliveryboy-view/deliveryboy-view.module';
 import {RoleGuard} from '../../core/guards/role.guard';
+import {LockGuard} from '../../core/guards/lock.guard';
 import {DeliveryboyRoleGuard} from '../../core/guards/deliveryboy-role.guard';
+import {LockedModule} from '../locked/locked.module';
 
 const routes: Routes = [{
   path: '',
@@ -17,13 +19,18 @@ const routes: Routes = [{
   canActivate: [LoggedUserGuard],
   children: [
     {
+      path: 'locked-page',
+      loadChildren: '../locked/locked.module#LockedModule',
+      canActivate: [LockGuard]
+    },
+    {
       path: 'delivery-boys',
-      loadChildren: () => DeliveryBoysModule,
+      loadChildren: '../delivery-boys/delivery-boys.module#DeliveryBoysModule',
       canActivate: [RoleGuard],
       data: {
         breadcrumb: 'Delivery Boys'
       }
-      },
+    },
     {
       path: 'dashboard',
       component: DashboardComponent,
@@ -34,7 +41,7 @@ const routes: Routes = [{
     },
     {
       path: 'deliveryboy-dashboard',
-      loadChildren: () => DeliveryboyViewModule,
+      loadChildren: '../deliveryboy-view/deliveryboy-view.module#DeliveryboyViewModule',
       canActivate: [DeliveryboyRoleGuard],
       data: {
         breadcrumb: 'Delivery Boy'
@@ -42,14 +49,14 @@ const routes: Routes = [{
     },
     {
       path: 'delivery',
-      loadChildren: () => DeliveryManagementModule,
+      loadChildren: '../delivery-management/delivery-management.module#DeliveryManagementModule',
       canActivate: [RoleGuard],
       data: {
         breadcrumb: 'Delivery'
       },
     },
     {
-      path: 'shops', loadChildren: () => ShopManagementModule,
+      path: 'shops', loadChildren: '../shop-management/shop-management.module#ShopManagementModule',
       canActivate: [RoleGuard],
       data: {
         breadcrumb: 'Shops'

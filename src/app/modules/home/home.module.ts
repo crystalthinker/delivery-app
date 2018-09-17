@@ -10,6 +10,7 @@ import {DeliveryManagementModule} from '../delivery-management/delivery-manageme
 import {ShopManagementModule} from '../shop-management/shop-management.module';
 import {DeliveryboyViewModule} from '../deliveryboy-view/deliveryboy-view.module';
 import {SharedModule} from '../shared/shared.module';
+import {LockedModule} from '../locked/locked.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {SharedModule} from '../shared/shared.module';
     ShopManagementModule,
     DashboardModule,
     DeliveryboyViewModule,
-    SharedModule
+    SharedModule,
+    LockedModule
   ],
   declarations: [HomeComponent],
 })

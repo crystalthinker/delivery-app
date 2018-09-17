@@ -30,7 +30,7 @@ export class DeliveryboyCreateComponent implements OnInit {
   }
   saveNewDeliveryBoy() {
     this.service.addNewDeliveryBoy(this.deliveryBoyForm.value).subscribe(res => {
-      this.router.navigate(['/delivery-boys/list']);
+      this.router.navigate(['/delivery-boys']);
     });
   }
 }
